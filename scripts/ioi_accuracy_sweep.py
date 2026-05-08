@@ -9,7 +9,7 @@ Experiments:
   D: Logit difference distribution at step 1000 (systematic S preference?)
   E: Attention patterns of early NMs (what are they attending to?)
 
-Saves incrementally to results/mega_experiments.json
+Saves incrementally to results/ioi_accuracy_sweep.json
 """
 
 import torch
@@ -55,7 +55,7 @@ PPT = 20
 SEED = 42
 TAU = 0.02
 
-RESULTS_FILE = "results/mega_experiments.json"
+RESULTS_FILE = "results/ioi_accuracy_sweep.json"
 
 # ============================================================
 # UTILITIES

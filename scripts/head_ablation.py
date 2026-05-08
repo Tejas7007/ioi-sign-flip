@@ -31,7 +31,7 @@ MODEL_NAME = "EleutherAI/pythia-160m-deduped"
 TEMPLATES = ALL_TEMPLATES[:15]
 PPT = 20
 SEED = 42
-RESULTS_FILE = "results/cole_experiments_apr30.json"
+RESULTS_FILE = "results/head_ablation.json"
 
 def empty_cache():
     torch.cuda.empty_cache()

@@ -14,9 +14,9 @@ def save(name):
     plt.savefig('figures/%s.pdf'%name, bbox_inches='tight')
     plt.close(); print("  %s"%name)
 
-p160=load('results/pythia_160m_component_emergence.json')
-p410=load('results/pythia_410m_component_emergence.json')
-p1b=load('results/pythia_1b_component_emergence.json')
+p160=load('results/pythia_160m_ioi_sweep.json')
+p410=load('results/pythia_410m_ioi_sweep.json')
+p1b=load('results/pythia_1b_ioi_sweep.json')
 pile=load('results/pythia_160m_pile_vs_synthetic.json')
 mega=load('results/pythia_160m_mega_experiments.json')
 ranks=load('results/pythia_160m_rank_progression.json')
