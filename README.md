@@ -57,7 +57,7 @@ python scripts/generate_all_figures.py
 
 ## Retrained Checkpoints
 
-103 dense checkpoints of Pythia-160M retrained from scratch (seed = 42), spanning steps 0–10000: every 10 steps for 0–100, every 50 steps for 100–3000, every 200 steps for 3000–10000. Available at [link upon acceptance].
+103 dense checkpoints of Pythia-160M retrained from scratch (seed = 42), spanning steps 0–10000: every 10 steps for 0–100, every 50 steps for 100–3000, every 200 steps for 3000–10000. Available at [https://huggingface.co/anonymous-research-sub/pythia-160m-retrained-seed42](https://huggingface.co/anonymous-research-sub/pythia-160m-retrained-seed42).
 
 ## Models Used
 
