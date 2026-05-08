@@ -5,7 +5,8 @@ Code, results, and figures for the ICML 2026 Mechanistic Interpretability Worksh
 ## Repository Structure
 
 ```
-scripts/       Experiment scripts (each self-contained, runnable on a single GPU)
+scripts/       Experiment scripts (runnable on a single GPU)
+src/           IOI dataset generation code (circuitscaling package)
 results/       Raw JSON outputs from all experiments
 figures/       All figures used in the paper (main text + appendix)
 ```
@@ -49,10 +50,9 @@ python scripts/causal_intervention.py
 python scripts/generate_all_figures.py
 ```
 
-Most scripts require the `circuitscaling` package from the [MLP-Paper-Cole](https://github.com/Tejas7007/MLP-Paper-Cole) repository for IOI dataset generation:
+The IOI dataset generation code is bundled in `src/circuitscaling/`. Set the Python path before running scripts:
 ```bash
-git clone https://github.com/Tejas7007/MLP-Paper-Cole.git
-export PYTHONPATH=/path/to/MLP-Paper-Cole/src:$PYTHONPATH
+export PYTHONPATH=src:$PYTHONPATH
 ```
 
 ### GPU Requirements
