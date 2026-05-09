@@ -1,7 +1,7 @@
 import os
 os.environ["HF_TOKEN"] = ""
 import torch, json, time, numpy as np, sys, random
-sys.path.insert(0, '/workspace/MLP-Paper-Cole/src')
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src'))
 from transformers import AutoModelForCausalLM
 from transformer_lens import HookedTransformer
 from circuitscaling.datasets import IOIDataset, ALL_TEMPLATES, CANDIDATE_NAMES

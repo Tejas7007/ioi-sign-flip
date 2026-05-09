@@ -1,5 +1,5 @@
 """
-Cole's Requested Experiments (April 30, 2025)
+Head ablation and validation experiments
 ==============================================
 Experiment A: Path patching on ORIGINAL Pythia-160M at early steps
     - Full path patching at steps 1000, 2000, 3000, 5000, 143000
@@ -21,7 +21,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-sys.path.insert(0, '/workspace/MLP-Paper-Cole/src')
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src'))
 from transformers import AutoModelForCausalLM
 from transformer_lens import HookedTransformer
 from circuitscaling.datasets import IOIDataset, ALL_TEMPLATES
@@ -609,7 +609,7 @@ def run_experiment_d(results):
 # ============================================================
 def main():
     print("=" * 60)
-    print("  COLE'S EXPERIMENTS - April 30, 2025")
+    print("  HEAD ABLATION EXPERIMENTS")
     print("  Started: %s" % time.strftime("%Y-%m-%d %H:%M:%S"))
     print("=" * 60)
 

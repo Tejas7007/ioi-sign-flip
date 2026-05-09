@@ -9,7 +9,7 @@ is feature-specific, not just S2 disruption.
 import os; os.environ["HF_TOKEN"] = ""
 import torch, json, numpy as np, sys, random
 from sklearn.linear_model import LogisticRegression
-sys.path.insert(0, '/workspace/MLP-Paper-Cole/src')
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src'))
 from transformers import AutoModelForCausalLM
 from transformer_lens import HookedTransformer
 from circuitscaling.datasets import IOIDataset, ALL_TEMPLATES, CANDIDATE_NAMES

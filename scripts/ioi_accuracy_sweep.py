@@ -1,5 +1,5 @@
 """
-MEGA EXPERIMENT SCRIPT - Answers all of Cole's questions.
+IOI accuracy sweep across Pythia scales.
 Run overnight on Vast.ai with nohup.
 
 Experiments:

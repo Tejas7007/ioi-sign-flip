@@ -7,7 +7,7 @@ from collections import Counter
 from transformers import AutoModelForCausalLM
 from transformer_lens import HookedTransformer
 import sys
-sys.path.insert(0, '/workspace/MLP-Paper-Cole/src')
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src'))
 from circuitscaling.datasets import IOIDataset, ALL_TEMPLATES
 
 DEVICE = "cuda"

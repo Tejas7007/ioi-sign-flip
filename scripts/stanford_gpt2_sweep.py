@@ -25,14 +25,14 @@ from transformer_lens import HookedTransformer
 # Try importing IOIDataset
 try:
     import sys
-    sys.path.insert(0, os.path.expanduser('~/MLP-Paper-Cole/src'))
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src'))
     from circuitscaling.datasets import IOIDataset, ALL_TEMPLATES
 except ImportError:
     try:
-        sys.path.insert(0, '/workspace/MLP-Paper-Cole/src')
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src'))
         from circuitscaling.datasets import IOIDataset, ALL_TEMPLATES
     except ImportError:
-        print("ERROR: Cannot import IOIDataset. Make sure MLP-Paper-Cole is available.")
+        print("ERROR: Cannot import IOIDataset. Make sure local src is available.")
         raise
 
 # ============================================================

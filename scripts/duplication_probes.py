@@ -1,7 +1,7 @@
 """
 Duplication Detection Probes (Clean version)
 =============================================
-Cole's ask: Binary classifier predicting whether a prompt contains a repeated name.
+Binary classifier predicting whether a prompt contains a repeated name.
 - IOI prompts (label=1): contain a repeated name (S appears twice)
 - Control prompts (label=0): same prompts but S2 token replaced with a third name
 
@@ -19,7 +19,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import accuracy_score
 
-sys.path.insert(0, '/workspace/MLP-Paper-Cole/src')
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src'))
 from transformers import AutoModelForCausalLM
 from transformer_lens import HookedTransformer
 from circuitscaling.datasets import IOIDataset, ALL_TEMPLATES, CANDIDATE_NAMES
