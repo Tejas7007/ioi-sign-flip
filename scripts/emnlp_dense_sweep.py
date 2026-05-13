@@ -161,14 +161,14 @@ def s2_patch_hook_factory(donor_cache, s2_positions, layer):
     donor's residual stream at S2 for the corresponding row."""
     donor_act = donor_cache[f"blocks.{layer}.hook_resid_post"]  # [B, T, D]
 
-    def hook(act, hook_pt):
-        for i in range(act.shape[0]):
+    def hook_fn(value, hook):
+        for i in range(value.shape[0]):
             p = int(s2_positions[i].item())
             if p >= 0:
-                act[i, p, :] = donor_act[i, p, :]
-        return act
+                value[i, p, :] = donor_act[i, p, :]
+        return value
 
-    return hook
+    return hook_fn
 
 
 def measure_l8h9_attn_to_s2(model, ioi_tokens, s2_positions):
@@ -180,9 +180,9 @@ def measure_l8h9_attn_to_s2(model, ioi_tokens, s2_positions):
     """
     cache = {}
 
-    def cap(act, hook_pt):
-        cache["pattern"] = act.detach()
-        return act
+    def cap(value, hook):
+        cache["pattern"] = value.detach()
+        return value
 
     model.run_with_hooks(
         ioi_tokens,
@@ -233,9 +233,9 @@ def run_one_step(model, step):
         names = [f"blocks.{L}.hook_resid_post" for L in PATCH_LAYERS]
 
         def make_cap(name, store):
-            def fn(act, hook_pt):
-                store[name] = act.detach()
-                return act
+            def fn(value, hook):
+                store[name] = value.detach()
+                return value
             return fn
 
         donor = {}
