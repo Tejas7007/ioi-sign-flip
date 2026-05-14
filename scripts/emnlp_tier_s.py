@@ -800,23 +800,40 @@ def phase5_cross_task_transfer(phase2_out, phase3_out):
     model = load_retrained(GREATER_THAN_DIP_STEP)
     prompts = make_greater_than_prompts(SEED)
 
-    # Tokenize and find first-year token position per prompt. The first
-    # year appears after "year " before "to" — find the token that's a
-    # 4-digit number starting with "17".
+    # Tokenize and find first-year token position per prompt. Pythia BPE
+    # typically tokenizes " 1732" as " 17" + "32" (two tokens). The
+    # year-start position is the first " 17" token; the prompt also
+    # ends with " 17" but we want the first occurrence.
     log("    locating first-year positions in greater-than prompts...")
+    year_prefix_ids = model.tokenizer.encode(" 17", add_special_tokens=False)
+    if len(year_prefix_ids) == 1:
+        year_prefix_token = year_prefix_ids[0]
+    else:
+        year_prefix_token = None
+        log(f"    WARN: ' 17' tokenizes to {len(year_prefix_ids)} tokens, using fallback detection")
+
     year_positions = []
     tokens_list = []
     for p in prompts:
         toks = model.to_tokens(p["prompt"]).to(DEVICE)
-        # Find the position whose decoded token starts with "17" and
-        # whose decoded form looks like a 4-digit year.
         seq = toks[0].cpu().tolist()
         year_pos = -1
-        for j in range(1, toks.shape[1]):
-            piece = model.tokenizer.decode([seq[j]]).strip()
-            if piece.startswith("17") and len(piece) >= 3:
-                year_pos = j
-                break
+
+        # Primary: find first " 17" token (the year prefix).
+        if year_prefix_token is not None:
+            for j in range(1, toks.shape[1]):
+                if seq[j] == year_prefix_token:
+                    year_pos = j
+                    break
+
+        # Fallback: any token whose decoded form looks like a year prefix.
+        if year_pos < 0:
+            for j in range(1, toks.shape[1]):
+                piece = model.tokenizer.decode([seq[j]]).strip()
+                if piece.startswith("17") and 2 <= len(piece) <= 4 and piece.replace(" ", "").isdigit():
+                    year_pos = j
+                    break
+
         year_positions.append(year_pos)
         tokens_list.append(toks)
     log(
