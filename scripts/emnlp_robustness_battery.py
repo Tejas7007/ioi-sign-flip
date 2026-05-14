@@ -109,6 +109,29 @@ def load_retrained(step, enable_attn_result=False):
     return model
 
 
+def load_pythia_original(step, enable_attn_result=False):
+    """Original Pythia-160M-deduped revisions, which exist at all
+    standard Pythia checkpoints including step 0 and step 143000 with
+    proper configs. Use this for phases that need pre-training-end
+    checkpoints (e.g., the workshop-paper-style probe analysis)."""
+    hf = AutoModelForCausalLM.from_pretrained(
+        BASE_MODEL, revision=f"step{step}", torch_dtype=torch.float32,
+    )
+    model = HookedTransformer.from_pretrained(
+        BASE_MODEL,
+        hf_model=hf,
+        device=DEVICE,
+        center_writing_weights=True,
+        center_unembed=True,
+        fold_ln=True,
+    )
+    del hf
+    if enable_attn_result:
+        model.set_use_attn_result(True)
+    torch.cuda.empty_cache()
+    return model
+
+
 def find_s2_position(token_row, s_token_id):
     seen = 0
     for j in range(1, token_row.shape[0]):
@@ -165,7 +188,17 @@ def build_control(model, ds, single_name_ids, rng, position="S2"):
         pos_dict = find_token_positions(
             ioi_tokens[i].cpu(), ds.io_token_ids[i], ds.s_token_ids[i],
         )
-        positions.append(pos_dict[position])
+        if position == "MID":
+            # Midpoint between S1 and END as a template-relative
+            # "neutral" content-token position. Falls back to END-3 if
+            # S1 wasn't found.
+            s1, end = pos_dict["S1"], pos_dict["END"]
+            p = (s1 + end) // 2 if s1 > 0 else end - 3
+        elif position in pos_dict:
+            p = pos_dict[position]
+        else:
+            p = -1
+        positions.append(p)
     positions = torch.tensor(positions, dtype=torch.long, device=DEVICE)
 
     ctrl_tokens = ioi_tokens.clone()
@@ -212,17 +245,9 @@ def build_control(model, ds, single_name_ids, rng, position="S2"):
         # to END.
         pass
     elif position == "MID":
-        # A template-relative middle position: position of " to" minus
-        # 3 (roughly the verb position). Approximate via position
-        # halfway between S1 and END.
-        for i in range(n):
-            pos_dict = find_token_positions(
-                ioi_tokens[i].cpu(), ds.io_token_ids[i], ds.s_token_ids[i],
-            )
-            s1, end = pos_dict["S1"], pos_dict["END"]
-            mid = (s1 + end) // 2 if s1 > 0 else end - 3
-            positions[i] = mid
-        # Replace with a random other content token at that position
+        # Position is already set at the top of the function. Replace
+        # the token at that position with a different content token
+        # from the same prompt.
         for i in range(n):
             p = int(positions[i].item())
             if p > 0 and p < ioi_tokens.shape[1] - 1:
@@ -328,7 +353,10 @@ def phase1_heldout_probes():
 
     for step in PROBE_STEPS:
         log(f"-- step {step} --")
-        model = load_retrained(step)
+        # Use ORIGINAL Pythia revisions: the retrained repo lacks step
+        # 143000 and has an incomplete config at step 0. Original Pythia
+        # has proper configs at every standard step revision.
+        model = load_pythia_original(step)
         single_name_ids, name_to_id = get_single_token_names(model.tokenizer)
         single_names = list(name_to_id.keys())
         log(f"   {len(single_names)} single-token names available")
@@ -902,9 +930,14 @@ def main():
 
     t0 = time.time()
     for key, fn in phases:
-        if key in results and results[key] is not None:
+        cached = results.get(key)
+        # Skip only if the phase has a real result. Errored entries
+        # ({"error": "..."}) should be retried, not skipped.
+        if cached is not None and "error" not in cached:
             log(f"SKIP {key}: already done")
             continue
+        if cached is not None and "error" in cached:
+            log(f"RETRY {key}: previous run errored ({cached['error']})")
         log(f"START {key}")
         try:
             results[key] = fn()
