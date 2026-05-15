@@ -1,0 +1,134 @@
+nohup: ignoring input
+[00:46:47] === Model: stanford_alias (stanford-crfm/alias-gpt2-small-x21) ===
+[00:46:47]   [1/10] stanford_alias/100: loading
+Loading weights:   0%|                                                                                                            | 0/149 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 149/149 [00:00<00:00, 1811.93it/s]
+Loaded pretrained model stanford-crfm/alias-gpt2-small-x21 into HookedTransformer
+[00:47:52]     step=100  acc=0.500  base_LD=-0.0074  ΔLD=+0.0025 [+0.002, +0.003]
+[00:47:52]   [2/10] stanford_alias/1500: loading
+Loading weights:   0%|                                                                                                            | 0/149 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 149/149 [00:00<00:00, 1984.10it/s]
+Loaded pretrained model stanford-crfm/alias-gpt2-small-x21 into HookedTransformer
+[00:48:52]     step=1500  acc=0.120  base_LD=-1.4747  ΔLD=+1.0261 [+0.951, +1.104]
+[00:48:52]   [3/10] stanford_alias/3000: loading
+Loading weights:   0%|                                                                                                            | 0/149 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 149/149 [00:00<00:00, 3406.21it/s]
+Loaded pretrained model stanford-crfm/alias-gpt2-small-x21 into HookedTransformer
+[00:49:50]     step=3000  acc=0.180  base_LD=-1.1703  ΔLD=+0.7695 [+0.692, +0.846]
+[00:49:50]   [4/10] stanford_alias/10000: loading
+Loading weights:   0%|                                                                                                            | 0/149 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 149/149 [00:00<00:00, 3828.68it/s]
+Loaded pretrained model stanford-crfm/alias-gpt2-small-x21 into HookedTransformer
+[00:50:49]     step=10000  acc=0.547  base_LD=+0.3080  ΔLD=-0.2288 [-0.332, -0.128]
+[00:50:49]   [5/10] stanford_alias/100000: loading
+Loading weights:   0%|                                                                                                            | 0/149 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 149/149 [00:00<00:00, 2390.28it/s]
+Loaded pretrained model stanford-crfm/alias-gpt2-small-x21 into HookedTransformer
+[00:51:49]     step=100000  acc=0.970  base_LD=+2.9564  ΔLD=-2.8890 [-3.026, -2.756]
+[00:51:49] === Model: polypythia_seed1 (EleutherAI/pythia-160m-seed1) ===
+[00:51:49]   [6/10] polypythia_seed1/1000: loading
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 1661.96it/s]
+Exception in thread Thread-auto_conversion:
+Traceback (most recent call last):
+  File "/venv/main/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/venv/main/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 117, in auto_conversion
+    raise e
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 96, in auto_conversion
+    sha = get_conversion_pr_reference(api, pretrained_model_name_or_path, **cached_file_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 77, in get_conversion_pr_reference
+    raise OSError(
+OSError: Could not create safetensors conversion PR. The repo does not appear to have a file named pytorch_model.bin or model.safetensors.If you are loading with variant, use `use_safetensors=False` to load the original model.
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:52:51]     step=1000  acc=0.383  base_LD=-0.4103  ΔLD=+0.2344 [+0.212, +0.257]
+[00:52:51]   [7/10] polypythia_seed1/2000: loading
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights:  70%|████████████████████████████████████████████████████████████████████▏                            | 104/148 [00:00<00:00, 989.35it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 1319.22it/s]
+Exception in thread Thread-auto_conversion:
+Traceback (most recent call last):
+  File "/venv/main/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/venv/main/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 117, in auto_conversion
+    raise e
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 96, in auto_conversion
+    sha = get_conversion_pr_reference(api, pretrained_model_name_or_path, **cached_file_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 77, in get_conversion_pr_reference
+    raise OSError(
+OSError: Could not create safetensors conversion PR. The repo does not appear to have a file named pytorch_model.bin or model.safetensors.If you are loading with variant, use `use_safetensors=False` to load the original model.
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:53:53]     step=2000  acc=0.307  base_LD=-0.6872  ΔLD=+0.5458 [+0.472, +0.622]
+[00:53:53]   [8/10] polypythia_seed1/3000: loading
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 2230.77it/s]
+Exception in thread Thread-auto_conversion:
+Traceback (most recent call last):
+  File "/venv/main/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/venv/main/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 117, in auto_conversion
+    raise e
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 96, in auto_conversion
+    sha = get_conversion_pr_reference(api, pretrained_model_name_or_path, **cached_file_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 72, in get_conversion_pr_reference
+    spawn_conversion(token, private, model_id)
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 49, in spawn_conversion
+    event_id = result["event_id"]
+               ~~~~~~^^^^^^^^^^^^
+KeyError: 'event_id'
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:54:54]     step=3000  acc=0.787  base_LD=+0.9650  ΔLD=-0.7264 [-0.801, -0.652]
+[00:54:55]   [9/10] polypythia_seed1/5000: loading
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 2700.32it/s]
+Exception in thread Thread-auto_conversion:
+Traceback (most recent call last):
+  File "/venv/main/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/venv/main/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 117, in auto_conversion
+    raise e
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 96, in auto_conversion
+    sha = get_conversion_pr_reference(api, pretrained_model_name_or_path, **cached_file_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 77, in get_conversion_pr_reference
+    raise OSError(
+OSError: Could not create safetensors conversion PR. The repo does not appear to have a file named pytorch_model.bin or model.safetensors.If you are loading with variant, use `use_safetensors=False` to load the original model.
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:55:55]     step=5000  acc=0.843  base_LD=+1.5688  ΔLD=-1.2939 [-1.391, -1.197]
+[00:55:55]   [10/10] polypythia_seed1/143000: loading
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 1626.28it/s]
+Exception in thread Thread-auto_conversion:
+Traceback (most recent call last):
+  File "/venv/main/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/venv/main/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 117, in auto_conversion
+    raise e
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 96, in auto_conversion
+    sha = get_conversion_pr_reference(api, pretrained_model_name_or_path, **cached_file_kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 72, in get_conversion_pr_reference
+    spawn_conversion(token, private, model_id)
+  File "/venv/main/lib/python3.12/site-packages/transformers/safetensors_conversion.py", line 49, in spawn_conversion
+    event_id = result["event_id"]
+               ~~~~~~^^^^^^^^^^^^
+KeyError: 'event_id'
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:56:55]     step=143000  acc=1.000  base_LD=+4.2497  ΔLD=-3.9229 [-4.081, -3.772]
+[00:56:55] Done. Total elapsed: 10.1 min. Output: results/emnlp_cross_model.json
+[00:56:55] 
+[00:56:55] === Sign flip summary ===
+[00:56:55] stanford_alias:
+[00:56:55]   step=   100  acc=0.500  base_LD=-0.0074  ΔLD=+0.0025  (sign=+)
+[00:56:55]   step=  1500  acc=0.120  base_LD=-1.4747  ΔLD=+1.0261  (sign=+)
+[00:56:55]   step=  3000  acc=0.180  base_LD=-1.1703  ΔLD=+0.7695  (sign=+)
+[00:56:55]   step= 10000  acc=0.547  base_LD=+0.3080  ΔLD=-0.2288  (sign=-)
+[00:56:55]   step=100000  acc=0.970  base_LD=+2.9564  ΔLD=-2.8890  (sign=-)
+[00:56:55] polypythia_seed1:
+[00:56:55]   step=  1000  acc=0.383  base_LD=-0.4103  ΔLD=+0.2344  (sign=+)
+[00:56:55]   step=  2000  acc=0.307  base_LD=-0.6872  ΔLD=+0.5458  (sign=+)
+[00:56:55]   step=  3000  acc=0.787  base_LD=+0.9650  ΔLD=-0.7264  (sign=-)
+[00:56:55]   step=  5000  acc=0.843  base_LD=+1.5688  ΔLD=-1.2939  (sign=-)
+[00:56:55]   step=143000  acc=1.000  base_LD=+4.2497  ΔLD=-3.9229  (sign=-)

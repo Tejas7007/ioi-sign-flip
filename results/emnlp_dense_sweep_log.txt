@@ -1,0 +1,206 @@
+nohup: ignoring input
+[23:54:38] [1/51] step=1000: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6274.96it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[23:55:24]   step=1000  acc=0.343  base_LD=-0.5153  ΔLD=+0.4041 [+0.362, +0.448]  L8H9->S2=0.021
+[23:55:25] [2/51] step=1050: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6226.06it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[23:56:10]   step=1050  acc=0.327  base_LD=-0.6505  ΔLD=+0.5093 [+0.459, +0.560]  L8H9->S2=0.025
+[23:56:11] [3/51] step=1100: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4580.83it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[23:56:54]   step=1100  acc=0.280  base_LD=-0.7893  ΔLD=+0.6105 [+0.559, +0.663]  L8H9->S2=0.037
+[23:56:55] [4/51] step=1150: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6188.88it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[23:57:40]   step=1150  acc=0.330  base_LD=-0.7202  ΔLD=+0.5580 [+0.507, +0.610]  L8H9->S2=0.039
+[23:57:40] [5/51] step=1200: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6305.81it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[23:58:16]   step=1200  acc=0.267  base_LD=-0.8055  ΔLD=+0.6155 [+0.563, +0.670]  L8H9->S2=0.040
+[23:58:16] [6/51] step=1250: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6029.05it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[23:58:57]   step=1250  acc=0.327  base_LD=-0.7575  ΔLD=+0.7335 [+0.665, +0.803]  L8H9->S2=0.036
+[23:58:57] [7/51] step=1300: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5966.52it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[23:59:35]   step=1300  acc=0.237  base_LD=-0.9574  ΔLD=+0.6902 [+0.626, +0.755]  L8H9->S2=0.033
+[23:59:35] [8/51] step=1350: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5411.06it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:00:13]   step=1350  acc=0.243  base_LD=-0.7829  ΔLD=+0.6601 [+0.602, +0.721]  L8H9->S2=0.029
+[00:00:14] [9/51] step=1400: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6869.44it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:00:47]   step=1400  acc=0.220  base_LD=-0.9820  ΔLD=+0.5700 [+0.517, +0.624]  L8H9->S2=0.021
+[00:00:48] [10/51] step=1450: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6405.57it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:01:26]   step=1450  acc=0.240  base_LD=-0.8247  ΔLD=+0.5837 [+0.535, +0.633]  L8H9->S2=0.031
+[00:01:26] [11/51] step=1500: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6224.44it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:02:10]   step=1500  acc=0.253  base_LD=-0.8970  ΔLD=+0.6691 [+0.604, +0.737]  L8H9->S2=0.047
+[00:02:11] [12/51] step=1550: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6270.59it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:02:55]   step=1550  acc=0.253  base_LD=-0.7312  ΔLD=+0.5286 [+0.473, +0.586]  L8H9->S2=0.030
+[00:02:55] [13/51] step=1600: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6175.03it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:03:37]   step=1600  acc=0.260  base_LD=-0.7979  ΔLD=+0.5538 [+0.494, +0.618]  L8H9->S2=0.033
+[00:03:38] [14/51] step=1650: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4755.19it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:04:23]   step=1650  acc=0.240  base_LD=-0.9390  ΔLD=+0.7210 [+0.646, +0.799]  L8H9->S2=0.065
+[00:04:23] [15/51] step=1700: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6270.65it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:04:52]   step=1700  acc=0.333  base_LD=-0.4452  ΔLD=+0.4849 [+0.429, +0.543]  L8H9->S2=0.030
+[00:04:53] [16/51] step=1750: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4697.58it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:05:37]   step=1750  acc=0.260  base_LD=-0.8285  ΔLD=+0.4958 [+0.434, +0.560]  L8H9->S2=0.022
+[00:05:37] [17/51] step=1800: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5954.73it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:06:21]   step=1800  acc=0.367  base_LD=-0.3922  ΔLD=+0.3879 [+0.320, +0.459]  L8H9->S2=0.021
+[00:06:21] [18/51] step=1850: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5368.43it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:07:06]   step=1850  acc=0.277  base_LD=-0.6119  ΔLD=+0.4973 [+0.432, +0.567]  L8H9->S2=0.030
+[00:07:06] [19/51] step=1900: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5856.31it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:07:56]   step=1900  acc=0.370  base_LD=-0.4373  ΔLD=+0.4609 [+0.400, +0.526]  L8H9->S2=0.019
+[00:07:57] [20/51] step=1950: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6136.63it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:08:49]   step=1950  acc=0.383  base_LD=-0.3870  ΔLD=+0.4609 [+0.396, +0.528]  L8H9->S2=0.035
+[00:08:50] [21/51] step=2000: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4486.70it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:09:42]   step=2000  acc=0.427  base_LD=-0.4194  ΔLD=+0.3746 [+0.306, +0.447]  L8H9->S2=0.030
+[00:09:42] [22/51] step=2050: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4378.81it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:10:31]   step=2050  acc=0.370  base_LD=-0.3723  ΔLD=+0.2853 [+0.230, +0.344]  L8H9->S2=0.007
+[00:10:31] [23/51] step=2100: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4546.24it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:11:30]   step=2100  acc=0.367  base_LD=-0.4328  ΔLD=+0.3882 [+0.325, +0.457]  L8H9->S2=0.020
+[00:11:30] [24/51] step=2150: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4958.40it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:12:26]   step=2150  acc=0.337  base_LD=-0.5398  ΔLD=+0.3188 [+0.262, +0.379]  L8H9->S2=0.020
+[00:12:26] [25/51] step=2200: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5907.02it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:13:25]   step=2200  acc=0.420  base_LD=-0.2891  ΔLD=+0.3117 [+0.241, +0.385]  L8H9->S2=0.025
+[00:13:26] [26/51] step=2250: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4633.21it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:14:27]   step=2250  acc=0.347  base_LD=-0.3712  ΔLD=+0.3471 [+0.281, +0.414]  L8H9->S2=0.021
+[00:14:27] [27/51] step=2300: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5137.82it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:15:25]   step=2300  acc=0.420  base_LD=-0.2363  ΔLD=+0.3099 [+0.246, +0.373]  L8H9->S2=0.020
+[00:15:26] [28/51] step=2350: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5436.08it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:16:15]   step=2350  acc=0.483  base_LD=-0.2115  ΔLD=+0.4228 [+0.357, +0.491]  L8H9->S2=0.021
+[00:16:16] [29/51] step=2400: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6303.45it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:17:12]   step=2400  acc=0.513  base_LD=+0.0002  ΔLD=+0.2338 [+0.169, +0.298]  L8H9->S2=0.012
+[00:17:12] [30/51] step=2450: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4307.52it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:18:10]   step=2450  acc=0.423  base_LD=-0.2462  ΔLD=+0.2540 [+0.185, +0.326]  L8H9->S2=0.022
+[00:18:10] [31/51] step=2500: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4500.10it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:18:54]   step=2500  acc=0.523  base_LD=+0.0841  ΔLD=+0.1146 [+0.023, +0.208]  L8H9->S2=0.028
+[00:18:54] [32/51] step=2550: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4657.09it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:19:48]   step=2550  acc=0.607  base_LD=+0.4167  ΔLD=+0.1073 [+0.016, +0.198]  L8H9->S2=0.019
+[00:19:48] [33/51] step=2600: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4545.67it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:20:46]   step=2600  acc=0.500  base_LD=-0.0056  ΔLD=+0.3446 [+0.256, +0.434]  L8H9->S2=0.038
+[00:20:46] [34/51] step=2650: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4880.89it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:21:36]   step=2650  acc=0.530  base_LD=+0.1312  ΔLD=+0.1001 [+0.039, +0.161]  L8H9->S2=0.018
+[00:21:37] [35/51] step=2700: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4527.27it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:22:30]   step=2700  acc=0.560  base_LD=+0.1061  ΔLD=-0.0117 [-0.081, +0.059]  L8H9->S2=0.019
+[00:22:31] [36/51] step=2750: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5574.93it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:23:29]   step=2750  acc=0.493  base_LD=+0.0828  ΔLD=+0.2117 [+0.126, +0.299]  L8H9->S2=0.034
+[00:23:29] [37/51] step=2800: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5796.65it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:24:24]   step=2800  acc=0.480  base_LD=+0.1350  ΔLD=+0.1748 [+0.087, +0.262]  L8H9->S2=0.032
+[00:24:24] [38/51] step=2850: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5606.75it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:25:13]   step=2850  acc=0.467  base_LD=-0.0436  ΔLD=+0.2015 [+0.128, +0.275]  L8H9->S2=0.030
+[00:25:13] [39/51] step=2900: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5006.59it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:26:03]   step=2900  acc=0.500  base_LD=-0.0111  ΔLD=+0.0966 [+0.001, +0.192]  L8H9->S2=0.049
+[00:26:03] [40/51] step=2950: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 8007.60it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:26:53]   step=2950  acc=0.557  base_LD=+0.2152  ΔLD=+0.0931 [+0.008, +0.180]  L8H9->S2=0.020
+[00:26:54] [41/51] step=3000: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5034.28it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:28:05]   step=3000  acc=0.433  base_LD=-0.1706  ΔLD=+0.1874 [+0.105, +0.270]  L8H9->S2=0.053
+[00:28:06] [42/51] step=3200: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4373.44it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:29:01]   step=3200  acc=0.480  base_LD=-0.0255  ΔLD=-0.0449 [-0.139, +0.047]  L8H9->S2=0.048
+[00:29:01] [43/51] step=3400: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4555.41it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:29:58]   step=3400  acc=0.667  base_LD=+0.6966  ΔLD=-0.2090 [-0.295, -0.123]  L8H9->S2=0.022
+[00:29:59] [44/51] step=3600: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5110.75it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:31:16]   step=3600  acc=0.627  base_LD=+0.5672  ΔLD=-0.1911 [-0.290, -0.091]  L8H9->S2=0.033
+[00:31:17] [45/51] step=3800: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5537.58it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:32:19]   step=3800  acc=0.673  base_LD=+0.7283  ΔLD=-0.5346 [-0.629, -0.443]  L8H9->S2=0.017
+[00:32:19] [46/51] step=4000: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4726.30it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:33:20]   step=4000  acc=0.627  base_LD=+0.5219  ΔLD=-0.3446 [-0.445, -0.244]  L8H9->S2=0.040
+[00:33:21] [47/51] step=4200: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5091.93it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:34:25]   step=4200  acc=0.677  base_LD=+0.6371  ΔLD=-0.4164 [-0.500, -0.331]  L8H9->S2=0.027
+[00:34:25] [48/51] step=4400: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5302.85it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:35:28]   step=4400  acc=0.550  base_LD=+0.3791  ΔLD=-0.4456 [-0.539, -0.356]  L8H9->S2=0.041
+[00:35:28] [49/51] step=4600: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4614.81it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:36:40]   step=4600  acc=0.563  base_LD=+0.1563  ΔLD=-0.4688 [-0.559, -0.384]  L8H9->S2=0.027
+[00:36:40] [50/51] step=4800: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4803.10it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:37:39]   step=4800  acc=0.720  base_LD=+0.8059  ΔLD=-0.6515 [-0.749, -0.556]  L8H9->S2=0.035
+[00:37:40] [51/51] step=5000: loading retrained checkpoint
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4823.51it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[00:38:39]   step=5000  acc=0.707  base_LD=+0.9030  ΔLD=-0.9479 [-1.046, -0.851]  L8H9->S2=0.029
+[00:38:40] Done. Total elapsed: 44.0 min. Output: results/emnlp_dense_sweep.json

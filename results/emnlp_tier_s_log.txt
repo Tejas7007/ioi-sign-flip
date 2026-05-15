@@ -1,0 +1,19 @@
+nohup: ignoring input
+[14:34:40] Resuming. Already done: ['phase1_collect_activations', 'phase2_train_saes', 'phase3_feature_identification', 'phase4_feature_ablation', 'phase5_cross_task_transfer']
+[14:34:40] SKIP phase1_collect_activations: already done
+[14:34:40] SKIP phase2_train_saes: already done
+[14:34:40] SKIP phase3_feature_identification: already done
+[14:34:40] SKIP phase4_feature_ablation: already done
+[14:34:40] RETRY phase5_cross_task_transfer: previous run errored (need at least one array to stack)
+[14:34:40] START phase5_cross_task_transfer
+[14:34:40] ============================================================
+[14:34:40] PHASE 5: Cross-task feature transfer (greater-than)
+[14:34:40] ============================================================
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5332.73it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[14:35:29]     locating first-year positions in greater-than prompts...
+[14:35:29]     found year position in 200/200 prompts
+[14:35:33]   layer 3 (SAE step2000_L3_e4_l11e-03): top dup feature idx=2879  ioi=5.849  ctrl=4.897  gt=1.646  gt_active%=100.0%
+[14:35:37]   layer 4 (SAE step2000_L4_e4_l11e-03): top dup feature idx=2296  ioi=3.853  ctrl=1.411  gt=1.047  gt_active%=100.0%
+[14:35:41]   layer 5 (SAE step2000_L5_e4_l11e-03): top dup feature idx=466  ioi=7.992  ctrl=4.691  gt=0.000  gt_active%=0.0%
+[14:35:41] Done. Total elapsed: 1.0 min. Output: results/emnlp_tier_s.json

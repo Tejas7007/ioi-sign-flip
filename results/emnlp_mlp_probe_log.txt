@@ -1,0 +1,144 @@
+nohup: ignoring input
+============================================================
+  MLP PROBE vs LOGISTIC REGRESSION
+  Testing nonlinear encoding of duplication at S2
+============================================================
+
+=== Step 0 ===
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4570.44it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+  IOI accuracy: 52.3%
+  Collected 600 examples
+  Layer  0: LR=87.8% MLP=84.8% (gap=-3.0%) ***
+  Layer  1: LR=88.8% MLP=86.0% (gap=-2.8%) ***
+  Layer  2: LR=89.3% MLP=86.2% (gap=-3.2%) ***
+  Layer  3: LR=89.7% MLP=86.0% (gap=-3.7%) ***
+  Layer  4: LR=89.7% MLP=87.0% (gap=-2.7%) ***
+  Layer  5: LR=90.3% MLP=85.3% (gap=-5.0%) ***
+  Layer  6: LR=89.2% MLP=86.2% (gap=-3.0%) ***
+  Layer  7: LR=89.0% MLP=86.2% (gap=-2.8%) ***
+  Layer  8: LR=89.5% MLP=88.3% (gap=-1.2%)
+  Layer  9: LR=89.5% MLP=87.0% (gap=-2.5%) ***
+  Layer 10: LR=89.5% MLP=86.8% (gap=-2.7%) ***
+  Layer 11: LR=89.2% MLP=88.7% (gap=-0.5%)
+
+=== Step 1000 ===
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 2993.85it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+  IOI accuracy: 42.0%
+  Collected 600 examples
+  Layer  0: LR=87.2% MLP=86.0% (gap=-1.2%)
+  Layer  1: LR=88.3% MLP=85.2% (gap=-3.2%) ***
+  Layer  2: LR=87.7% MLP=85.5% (gap=-2.2%) ***
+  Layer  3: LR=87.3% MLP=84.8% (gap=-2.5%) ***
+  Layer  4: LR=98.5% MLP=98.0% (gap=-0.5%)
+  Layer  5: LR=98.7% MLP=97.8% (gap=-0.8%)
+  Layer  6: LR=98.3% MLP=97.7% (gap=-0.7%)
+  Layer  7: LR=98.3% MLP=98.0% (gap=-0.3%)
+  Layer  8: LR=98.0% MLP=97.0% (gap=-1.0%)
+  Layer  9: LR=98.0% MLP=97.8% (gap=-0.2%)
+  Layer 10: LR=97.8% MLP=98.2% (gap=+0.3%)
+  Layer 11: LR=98.0% MLP=98.0% (gap=+0.0%)
+
+=== Step 2000 ===
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 2717.16it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+  IOI accuracy: 31.7%
+  Collected 600 examples
+  Layer  0: LR=88.3% MLP=85.0% (gap=-3.3%) ***
+  Layer  1: LR=97.2% MLP=92.2% (gap=-5.0%) ***
+  Layer  2: LR=97.3% MLP=93.8% (gap=-3.5%) ***
+  Layer  3: LR=97.7% MLP=91.0% (gap=-6.7%) ***
+  Layer  4: LR=98.3% MLP=96.5% (gap=-1.8%)
+  Layer  5: LR=98.7% MLP=97.8% (gap=-0.8%)
+  Layer  6: LR=98.3% MLP=97.7% (gap=-0.7%)
+  Layer  7: LR=98.2% MLP=95.8% (gap=-2.3%) ***
+  Layer  8: LR=98.2% MLP=95.8% (gap=-2.3%) ***
+  Layer  9: LR=98.5% MLP=95.7% (gap=-2.8%) ***
+  Layer 10: LR=98.2% MLP=95.8% (gap=-2.3%) ***
+  Layer 11: LR=97.7% MLP=93.8% (gap=-3.8%) ***
+
+=== Step 3000 ===
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights:   1%|█▎                                                                                                  | 2/148 [00:00<00:21,  6.84it/s]Loading weights:  30%|█████████████████████████████▏                                                                    | 44/148 [00:00<00:00, 142.30it/s]Loading weights:  58%|████████████████████████████████████████████████████████▉                                         | 86/148 [00:00<00:00, 230.50it/s]Loading weights:  80%|█████████████████████████████████████████████████████████████████████████████▉                   | 119/148 [00:00<00:00, 260.88it/s]Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 246.33it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+  IOI accuracy: 57.0%
+  Collected 600 examples
+  Layer  0: LR=89.0% MLP=84.5% (gap=-4.5%) ***
+  Layer  1: LR=100.0% MLP=98.2% (gap=-1.8%)
+  Layer  2: LR=100.0% MLP=99.0% (gap=-1.0%)
+  Layer  3: LR=99.8% MLP=99.2% (gap=-0.7%)
+  Layer  4: LR=99.7% MLP=98.7% (gap=-1.0%)
+  Layer  5: LR=99.5% MLP=98.7% (gap=-0.8%)
+  Layer  6: LR=99.5% MLP=98.3% (gap=-1.2%)
+  Layer  7: LR=99.7% MLP=99.2% (gap=-0.5%)
+  Layer  8: LR=99.7% MLP=98.2% (gap=-1.5%)
+  Layer  9: LR=99.5% MLP=97.8% (gap=-1.7%)
+  Layer 10: LR=99.0% MLP=97.7% (gap=-1.3%)
+  Layer 11: LR=99.0% MLP=96.5% (gap=-2.5%) ***
+
+=== Step 5000 ===
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights:   1%|▋                                                                                                   | 1/148 [00:00<00:28,  5.09it/s]Loading weights:  28%|███████████████████████████▊                                                                      | 42/148 [00:00<00:00, 174.23it/s]Loading weights:  45%|███████████████████████████████████████████▋                                                      | 66/148 [00:00<00:00, 196.34it/s]Loading weights:  70%|████████████████████████████████████████████████████████████████████▏                            | 104/148 [00:00<00:00, 259.30it/s]Loading weights:  97%|██████████████████████████████████████████████████████████████████████████████████████████████▍  | 144/148 [00:00<00:00, 233.65it/s]Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 212.66it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+  IOI accuracy: 88.0%
+  Collected 600 examples
+  Layer  0: LR=90.7% MLP=85.5% (gap=-5.2%) ***
+  Layer  1: LR=100.0% MLP=99.2% (gap=-0.8%)
+  Layer  2: LR=100.0% MLP=98.5% (gap=-1.5%)
+  Layer  3: LR=100.0% MLP=99.2% (gap=-0.8%)
+  Layer  4: LR=100.0% MLP=99.5% (gap=-0.5%)
+  Layer  5: LR=100.0% MLP=99.2% (gap=-0.8%)
+  Layer  6: LR=100.0% MLP=99.5% (gap=-0.5%)
+  Layer  7: LR=100.0% MLP=99.7% (gap=-0.3%)
+  Layer  8: LR=99.8% MLP=98.7% (gap=-1.2%)
+  Layer  9: LR=99.8% MLP=99.3% (gap=-0.5%)
+  Layer 10: LR=100.0% MLP=99.2% (gap=-0.8%)
+  Layer 11: LR=100.0% MLP=98.7% (gap=-1.3%)
+
+=== Step 10000 ===
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights:   1%|█▎                                                                                                  | 2/148 [00:00<00:14, 10.33it/s]Loading weights:  11%|██████████▋                                                                                        | 16/148 [00:00<00:02, 65.25it/s]Loading weights:  30%|█████████████████████████████▏                                                                    | 44/148 [00:00<00:00, 145.88it/s]Loading weights:  57%|███████████████████████████████████████████████████████▌                                          | 84/148 [00:00<00:00, 233.91it/s]Loading weights:  75%|████████████████████████████████████████████████████████████████████████▊                        | 111/148 [00:00<00:00, 244.83it/s]Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 212.75it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+  IOI accuracy: 97.3%
+  Collected 600 examples
+  Layer  0: LR=97.2% MLP=92.3% (gap=-4.8%) ***
+  Layer  1: LR=100.0% MLP=99.2% (gap=-0.8%)
+  Layer  2: LR=100.0% MLP=99.7% (gap=-0.3%)
+  Layer  3: LR=100.0% MLP=99.7% (gap=-0.3%)
+  Layer  4: LR=100.0% MLP=99.8% (gap=-0.2%)
+  Layer  5: LR=100.0% MLP=99.8% (gap=-0.2%)
+  Layer  6: LR=100.0% MLP=99.8% (gap=-0.2%)
+  Layer  7: LR=100.0% MLP=99.5% (gap=-0.5%)
+  Layer  8: LR=100.0% MLP=98.8% (gap=-1.2%)
+  Layer  9: LR=100.0% MLP=100.0% (gap=+0.0%)
+  Layer 10: LR=100.0% MLP=100.0% (gap=+0.0%)
+  Layer 11: LR=100.0% MLP=99.0% (gap=-1.0%)
+
+=== Step 143000 ===
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights:   1%|█▎                                                                                                  | 2/148 [00:00<00:14, 10.11it/s]Loading weights:  26%|█████████████████████████▏                                                                        | 38/148 [00:00<00:00, 112.89it/s]Loading weights:  49%|███████████████████████████████████████████████▋                                                  | 72/148 [00:00<00:00, 181.18it/s]Loading weights:  69%|██████████████████████████████████████████████████████████████████▊                              | 102/148 [00:00<00:00, 216.50it/s]Loading weights:  92%|█████████████████████████████████████████████████████████████████████████████████████████▏       | 136/148 [00:00<00:00, 253.43it/s]Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 213.36it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+  IOI accuracy: 99.7%
+  Collected 600 examples
+  Layer  0: LR=99.8% MLP=97.3% (gap=-2.5%) ***
+  Layer  1: LR=100.0% MLP=99.5% (gap=-0.5%)
+  Layer  2: LR=100.0% MLP=99.5% (gap=-0.5%)
+  Layer  3: LR=100.0% MLP=99.5% (gap=-0.5%)
+  Layer  4: LR=100.0% MLP=100.0% (gap=+0.0%)
+  Layer  5: LR=100.0% MLP=100.0% (gap=+0.0%)
+  Layer  6: LR=100.0% MLP=98.7% (gap=-1.3%)
+  Layer  7: LR=100.0% MLP=98.2% (gap=-1.8%)
+  Layer  8: LR=100.0% MLP=99.3% (gap=-0.7%)
+  Layer  9: LR=100.0% MLP=98.3% (gap=-1.7%)
+  Layer 10: LR=100.0% MLP=99.5% (gap=-0.5%)
+  Layer 11: LR=100.0% MLP=93.0% (gap=-7.0%) ***
+
+============================================================
+  SUMMARY
+  Step      0: IOI=52% LR=90.3%(layer_5) MLP=88.7%(layer_11) gap=-1.7%
+  Step   1000: IOI=42% LR=98.7%(layer_5) MLP=98.2%(layer_10) gap=-0.5%
+  Step   2000: IOI=32% LR=98.7%(layer_5) MLP=97.8%(layer_5) gap=-0.8%
+  Step   3000: IOI=57% LR=100.0%(layer_1) MLP=99.2%(layer_3) gap=-0.8%
+  Step   5000: IOI=88% LR=100.0%(layer_1) MLP=99.7%(layer_7) gap=-0.3%
+  Step  10000: IOI=97% LR=100.0%(layer_1) MLP=100.0%(layer_9) gap=+0.0%
+  Step 143000: IOI=100% LR=100.0%(layer_1) MLP=100.0%(layer_4) gap=+0.0%
+
+Saved: results/emnlp_mlp_probe.json

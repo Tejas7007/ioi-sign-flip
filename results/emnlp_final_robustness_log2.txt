@@ -1,0 +1,93 @@
+nohup: ignoring input
+[02:42:43] Resuming. Already done: ['phase2_template_sensitivity', 'phase3_layer_sensitivity', 'phase4_olmo']
+[02:42:43] START phase1_grokking
+[02:42:43] ============================================================
+[02:42:43] PHASE 1: Grokking sign-flip test (modular addition mod 113)
+[02:42:43]   Sweeping training fractions: 0.3 (clean grokking),
+[02:42:43]   0.5 (moderate), 0.7 (immediate generalization)
+[02:42:43] ============================================================
+[02:42:43] 
+  --- train_frac=0.3 ---
+[02:42:43]   Dataset: 3830 train, 8939 test (p=113)
+[02:42:43]     step=     0  train=0.006  test=0.010  Δ_test=+0.0001  Δ_train=+0.0000  (0s)
+[02:42:54]     step=  2000  train=1.000  test=0.193  Δ_test=-0.1870  Δ_train=-0.9851  (11s)
+[02:42:58]     step=  3000  train=0.996  test=0.359  Δ_test=-0.3536  Δ_train=-0.9799  (15s)
+[02:43:00]     step=  3500  train=1.000  test=0.805  Δ_test=-0.7974  Δ_train=-0.9875  (17s)
+[02:43:02]     step=  4000  train=1.000  test=1.000  Δ_test=-0.9905  Δ_train=-0.9922  (19s)
+[02:43:05]     step=  4500  train=0.168  test=0.105  Δ_test=-0.0961  Δ_train=-0.1598  (22s)
+[02:43:07]     step=  5000  train=1.000  test=1.000  Δ_test=-0.9898  Δ_train=-0.9943  (24s)
+[02:43:29]     step= 10000  train=1.000  test=1.000  Δ_test=-0.9905  Δ_train=-0.9927  (46s)
+[02:43:51]     step= 15000  train=1.000  test=1.000  Δ_test=-0.9907  Δ_train=-0.9922  (68s)
+[02:44:02]     step= 17500  train=0.142  test=0.105  Δ_test=-0.0962  Δ_train=-0.1329  (79s)
+[02:44:04]     step= 18000  train=1.000  test=1.000  Δ_test=-0.9914  Δ_train=-0.9906  (81s)
+[02:44:13]     step= 20000  train=1.000  test=1.000  Δ_test=-0.9907  Δ_train=-0.9922  (90s)
+[02:44:22]     step= 22000  train=0.721  test=0.679  Δ_test=-0.6700  Δ_train=-0.7125  (98s)
+[02:44:24]     step= 22500  train=1.000  test=1.000  Δ_test=-0.9898  Δ_train=-0.9943  (101s)
+[02:44:35]     step= 25000  train=1.000  test=1.000  Δ_test=-0.9913  Δ_train=-0.9909  (112s)
+[02:44:46]     step= 27500  train=0.816  test=0.767  Δ_test=-0.7587  Δ_train=-0.8055  (123s)
+[02:44:48]     step= 28000  train=0.911  test=0.841  Δ_test=-0.8326  Δ_train=-0.9010  (125s)
+[02:44:50]     step= 28500  train=1.000  test=1.000  Δ_test=-0.9906  Δ_train=-0.9924  (127s)
+[02:44:57]     step= 30000  train=1.000  test=1.000  Δ_test=-0.9908  Δ_train=-0.9919  (134s)
+[02:45:19]     step= 35000  train=1.000  test=1.000  Δ_test=-0.9903  Δ_train=-0.9932  (156s)
+[02:45:41]     step= 40000  train=1.000  test=1.000  Δ_test=-0.9906  Δ_train=-0.9911  (178s)
+[02:46:03]     step= 45000  train=1.000  test=1.000  Δ_test=-0.9909  Δ_train=-0.9916  (200s)
+[02:46:25]     step= 50000  train=1.000  test=1.000  Δ_test=-0.9913  Δ_train=-0.9909  (222s)
+[02:46:25]   frac=0.3: grok_step=4000  min_test=0.010 @ step 0  max_Δ_test=+0.0001  positive_Δ=NO
+[02:46:25] 
+  --- train_frac=0.5 ---
+[02:46:25]   Dataset: 6384 train, 6385 test (p=113)
+[02:46:25]     step=     0  train=0.006  test=0.011  Δ_test=+0.0002  Δ_train=+0.0000  (0s)
+[02:46:27]     step=   500  train=1.000  test=0.494  Δ_test=-0.4847  Δ_train=-0.9909  (2s)
+[02:46:29]     step=  1000  train=1.000  test=0.995  Δ_test=-0.9875  Δ_train=-0.9898  (4s)
+[02:46:47]     step=  5000  train=1.000  test=1.000  Δ_test=-0.9919  Δ_train=-0.9904  (22s)
+[02:46:56]     step=  7000  train=0.868  test=0.846  Δ_test=-0.8365  Δ_train=-0.8596  (31s)
+[02:46:58]     step=  7500  train=1.000  test=1.000  Δ_test=-0.9901  Δ_train=-0.9922  (33s)
+[02:47:09]     step= 10000  train=1.000  test=1.000  Δ_test=-0.9906  Δ_train=-0.9917  (44s)
+[02:47:18]     step= 12000  train=0.955  test=0.937  Δ_test=-0.9272  Δ_train=-0.9474  (53s)
+[02:47:20]     step= 12500  train=1.000  test=1.000  Δ_test=-0.9909  Δ_train=-0.9914  (55s)
+[02:47:22]     step= 13000  train=0.825  test=0.805  Δ_test=-0.7986  Δ_train=-0.8133  (57s)
+[02:47:24]     step= 13500  train=1.000  test=1.000  Δ_test=-0.9925  Δ_train=-0.9898  (59s)
+[02:47:31]     step= 15000  train=1.000  test=1.000  Δ_test=-0.9903  Δ_train=-0.9920  (66s)
+[02:47:40]     step= 17000  train=0.413  test=0.377  Δ_test=-0.3701  Δ_train=-0.4024  (75s)
+[02:47:42]     step= 17500  train=1.000  test=1.000  Δ_test=-0.9901  Δ_train=-0.9922  (77s)
+[02:47:53]     step= 20000  train=1.000  test=1.000  Δ_test=-0.9917  Δ_train=-0.9906  (88s)
+[02:48:13]     step= 24500  train=0.951  test=0.949  Δ_test=-0.9406  Δ_train=-0.9422  (108s)
+[02:48:15]     step= 25000  train=1.000  test=1.000  Δ_test=-0.9919  Δ_train=-0.9904  (110s)
+[02:48:35]     step= 29500  train=0.382  test=0.341  Δ_test=-0.3323  Δ_train=-0.3733  (130s)
+[02:48:37]     step= 30000  train=1.000  test=1.000  Δ_test=-0.9911  Δ_train=-0.9912  (132s)
+[02:48:59]     step= 35000  train=1.000  test=1.000  Δ_test=-0.9914  Δ_train=-0.9909  (154s)
+[02:49:18]     step= 39500  train=0.046  test=0.049  Δ_test=-0.0410  Δ_train=-0.0357  (173s)
+[02:49:21]     step= 40000  train=1.000  test=1.000  Δ_test=-0.9912  Δ_train=-0.9911  (176s)
+[02:49:42]     step= 45000  train=1.000  test=1.000  Δ_test=-0.9909  Δ_train=-0.9914  (197s)
+[02:49:45]     step= 45500  train=0.899  test=0.873  Δ_test=-0.8644  Δ_train=-0.8893  (200s)
+[02:49:47]     step= 46000  train=1.000  test=1.000  Δ_test=-0.9919  Δ_train=-0.9904  (202s)
+[02:50:04]     step= 50000  train=1.000  test=1.000  Δ_test=-0.9906  Δ_train=-0.9917  (219s)
+[02:50:04]   frac=0.5: grok_step=1000  min_test=0.011 @ step 0  max_Δ_test=+0.0002  positive_Δ=NO
+[02:50:04] 
+  --- train_frac=0.7 ---
+[02:50:04]   Dataset: 8938 train, 3831 test (p=113)
+[02:50:04]     step=     0  train=0.009  test=0.009  Δ_test=+0.0003  Δ_train=+0.0000  (0s)
+[02:50:07]     step=   500  train=0.994  test=0.835  Δ_test=-0.8293  Δ_train=-0.9839  (2s)
+[02:50:09]     step=  1000  train=1.000  test=1.000  Δ_test=-0.9924  Δ_train=-0.9906  (4s)
+[02:50:26]     step=  5000  train=0.999  test=0.999  Δ_test=-0.9893  Δ_train=-0.9909  (22s)
+[02:50:49]     step= 10000  train=1.000  test=1.000  Δ_test=-0.9919  Δ_train=-0.9906  (44s)
+[02:51:11]     step= 15000  train=1.000  test=1.000  Δ_test=-0.9914  Δ_train=-0.9910  (66s)
+[02:51:15]     step= 16000  train=0.721  test=0.713  Δ_test=-0.7063  Δ_train=-0.7117  (71s)
+[02:51:17]     step= 16500  train=1.000  test=1.000  Δ_test=-0.9927  Δ_train=-0.9905  (73s)
+[02:51:32]     step= 20000  train=1.000  test=1.000  Δ_test=-0.9901  Δ_train=-0.9916  (88s)
+[02:51:54]     step= 25000  train=1.000  test=1.000  Δ_test=-0.9906  Δ_train=-0.9914  (110s)
+[02:51:59]     step= 26000  train=0.925  test=0.913  Δ_test=-0.9066  Δ_train=-0.9152  (114s)
+[02:52:01]     step= 26500  train=1.000  test=1.000  Δ_test=-0.9909  Δ_train=-0.9913  (116s)
+[02:52:07]     step= 28000  train=0.154  test=0.152  Δ_test=-0.1438  Δ_train=-0.1452  (123s)
+[02:52:10]     step= 28500  train=1.000  test=1.000  Δ_test=-0.9916  Δ_train=-0.9909  (125s)
+[02:52:16]     step= 30000  train=1.000  test=1.000  Δ_test=-0.9898  Δ_train=-0.9917  (132s)
+[02:52:36]     step= 34500  train=0.882  test=0.873  Δ_test=-0.8622  Δ_train=-0.8745  (151s)
+[02:52:38]     step= 35000  train=1.000  test=1.000  Δ_test=-0.9888  Δ_train=-0.9922  (154s)
+[02:53:00]     step= 40000  train=1.000  test=1.000  Δ_test=-0.9909  Δ_train=-0.9913  (175s)
+[02:53:22]     step= 45000  train=1.000  test=1.000  Δ_test=-0.9877  Δ_train=-0.9926  (197s)
+[02:53:44]     step= 50000  train=1.000  test=1.000  Δ_test=-0.9932  Δ_train=-0.9903  (220s)
+[02:53:44]   frac=0.7: grok_step=1000  min_test=0.009 @ step 0  max_Δ_test=+0.0003  positive_Δ=NO
+[02:53:44] SKIP phase2_template_sensitivity: already done
+[02:53:44] SKIP phase3_layer_sensitivity: already done
+[02:53:44] SKIP phase4_olmo: already done
+[02:53:44] Done. Total elapsed: 11.0 min. Output: results/emnlp_final_robustness.json

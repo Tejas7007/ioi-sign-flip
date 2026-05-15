@@ -1,0 +1,78 @@
+nohup: ignoring input
+[03:54:20] Resuming. Already done: ['phase1_toy_model', 'phase2_logit_lens', 'phase3_pca_ablation']
+[03:54:20] SKIP phase1_toy_model: already done
+[03:54:20] RETRY phase2_logit_lens: previous error (Can't call numpy() on Tensor that requires grad. Use tensor.)
+[03:54:20] START phase2_logit_lens
+[03:54:20] ============================================================
+[03:54:20] PHASE 2: Logit lens across training
+[03:54:20] ============================================================
+[03:54:20]   step 1000:
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5326.42it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:55:04]     L0 LD=-0.025  L11 LD=-0.109  flip_layer=None
+[03:55:04]   step 2000:
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5689.22it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:55:48]     L0 LD=-0.047  L11 LD=-0.251  flip_layer=None
+[03:55:48]   step 3000:
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4684.53it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:56:31]     L0 LD=-0.047  L11 LD=-0.065  flip_layer=8
+[03:56:31]   step 5000:
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6043.14it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:57:12]     L0 LD=-0.077  L11 LD=+0.248  flip_layer=8
+[03:57:13]   step 143000:
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6197.34it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:57:22]     L0 LD=-0.158  L11 LD=+0.104  flip_layer=8
+[03:57:22] SKIP phase3_pca_ablation: already done
+[03:57:22] START phase4_multiseed_grokking
+[03:57:22] ============================================================
+[03:57:22] PHASE 4: Multi-seed grokking (3 seeds, frac=0.3)
+[03:57:22] ============================================================
+[03:57:22]   seed=42
+[04:02:05]     grok=3000  max_Δ=+0.0000  positive=NO
+[04:02:05]   seed=123
+[04:06:02]     grok=2500  max_Δ=+0.0008  positive=NO
+[04:06:02]   seed=456
+[04:10:39]     grok=2500  max_Δ=+0.0000  positive=NO
+[04:10:39]   VERDICT: any positive Δ across seeds? False
+[04:10:39] START phase5_olmo
+[04:10:39] ============================================================
+[04:10:39] PHASE 5: OLMo training checkpoint sweep
+[04:10:39] ============================================================
+[04:10:39]   Trying revision 'step0-tokens0B'...
+[04:10:39]     failed: step0-tokens0B is not a valid git identifier (branch name, tag name or commit id) that exists for th
+[04:10:39]   Trying revision 'step1000-tokens4B'...
+Loading weights:   0%|                                                                                                            | 0/113 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 113/113 [00:00<00:00, 3985.77it/s]
+Loaded pretrained model allenai/OLMo-1B-hf into HookedTransformer
+[04:11:22]     SUCCESS: acc=44.0%  LD=-0.158
+[04:11:22]   Trying revision 'step5000-tokens21B'...
+[04:11:22]     failed: step5000-tokens21B is not a valid git identifier (branch name, tag name or commit id) that exists fo
+[04:11:22]   Trying revision 'step10000-tokens42B'...
+[04:11:23]     failed: step10000-tokens42B is not a valid git identifier (branch name, tag name or commit id) that exists f
+[04:11:23]   Trying revision 'step50000-tokens210B'...
+[04:11:23]     failed: step50000-tokens210B is not a valid git identifier (branch name, tag name or commit id) that exists 
+[04:11:23]   Trying revision 'step100000-tokens419B'...
+Loading weights:   0%|                                                                                                            | 0/113 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 113/113 [00:00<00:00, 5192.51it/s]
+Loaded pretrained model allenai/OLMo-1B-hf into HookedTransformer
+[04:12:21]     SUCCESS: acc=61.0%  LD=+0.745
+[04:12:22]   Trying revision 'step250000-tokens1048B'...
+[04:12:22]     failed: step250000-tokens1048B is not a valid git identifier (branch name, tag name or commit id) that exist
+[04:12:22]   Trying revision 'step0'...
+[04:12:22]     failed: step0 is not a valid git identifier (branch name, tag name or commit id) that exists for this model 
+[04:12:22]   Trying revision 'step1000'...
+[04:12:22]     failed: step1000 is not a valid git identifier (branch name, tag name or commit id) that exists for this mod
+[04:12:22]   Trying revision 'step5000'...
+[04:12:23]     failed: step5000 is not a valid git identifier (branch name, tag name or commit id) that exists for this mod
+[04:12:23]   Trying revision 'step10000'...
+[04:12:23]     failed: step10000 is not a valid git identifier (branch name, tag name or commit id) that exists for this mo
+[04:12:23]   Trying revision 'step50000'...
+[04:12:23]     failed: step50000 is not a valid git identifier (branch name, tag name or commit id) that exists for this mo
+[04:12:23]   Trying revision 'main'...
+Loading weights:   0%|                                                                                                            | 0/113 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 113/113 [00:00<00:00, 5157.14it/s]
+Loaded pretrained model allenai/OLMo-1B-hf into HookedTransformer
+[04:12:39]     SUCCESS: acc=66.0%  LD=+0.923
+[04:12:39]   Found 3 working checkpoints
+[04:12:39] Done. Total elapsed: 18.3 min. Output: results/emnlp_reviewer_response.json

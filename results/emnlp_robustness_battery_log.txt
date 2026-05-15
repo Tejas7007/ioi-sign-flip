@@ -1,0 +1,196 @@
+nohup: ignoring input
+[02:29:05] Resuming. Already done: ['phase1_heldout_probes', 'phase2_position_specificity']
+[02:29:05] RETRY phase1_heldout_probes: previous run errored (Unrecognized model in anonymous-research-sub/pythia-160m-retrained-seed42. Should have a `model_type` key in its config.json.)
+[02:29:05] START phase1_heldout_probes
+[02:29:05] ============================================================
+[02:29:05] PHASE 1: Held-out probe generalization
+[02:29:05] ============================================================
+[02:29:05] -- step 0 --
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 1540.24it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[02:32:21]    134 single-token names available
+[02:32:21]    layer 1: collecting activations
+[02:33:13]       A->B: in=100.0%, held-out=43.7% (gap=+56.3%) | B->A: in=100.0%, held-out=43.5% (gap=+56.5%)
+[02:33:13]    layer 5: collecting activations
+[02:33:23]       A->B: in=100.0%, held-out=44.2% (gap=+55.8%) | B->A: in=100.0%, held-out=44.5% (gap=+55.5%)
+[02:33:23] -- step 2000 --
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 7081.26it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[02:36:54]    134 single-token names available
+[02:36:54]    layer 1: collecting activations
+[02:37:50]       A->B: in=100.0%, held-out=66.3% (gap=+33.7%) | B->A: in=100.0%, held-out=56.2% (gap=+43.8%)
+[02:37:50]    layer 5: collecting activations
+[02:38:21]       A->B: in=100.0%, held-out=52.5% (gap=+47.5%) | B->A: in=100.0%, held-out=70.7% (gap=+29.3%)
+[02:38:23] -- step 143000 --
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 1486.13it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[02:41:46]    134 single-token names available
+[02:41:46]    layer 1: collecting activations
+[02:42:09]       A->B: in=100.0%, held-out=98.8% (gap=+1.2%) | B->A: in=100.0%, held-out=99.5% (gap=+0.5%)
+[02:42:09]    layer 5: collecting activations
+[02:42:27]       A->B: in=100.0%, held-out=99.0% (gap=+1.0%) | B->A: in=100.0%, held-out=99.8% (gap=+0.2%)
+[02:42:29] RETRY phase2_position_specificity: previous run errored ('MID')
+[02:42:29] START phase2_position_specificity
+[02:42:29] ============================================================
+[02:42:29] PHASE 2: Position specificity scan at step 2000
+[02:42:29] ============================================================
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 1544.62it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[02:45:53] -- patching at S1 --
+[02:46:02]    S1: ΔLD=+1.3030 [+1.198, +1.415]
+[02:46:02] -- patching at S2 --
+[02:46:13]    S2: ΔLD=+0.3884 [+0.322, +0.458]
+[02:46:13] -- patching at IO --
+[02:46:21]    IO: ΔLD=-1.6839 [-1.833, -1.538]
+[02:46:21] -- patching at BOS --
+[02:46:30]    BOS: ΔLD=+0.2592 [+0.062, +0.452]
+[02:46:30] -- patching at MID --
+[02:46:39]    MID: ΔLD=-0.0286 [-0.126, +0.072]
+[02:46:41] START phase3_l4h0_trajectory
+[02:46:41] ============================================================
+[02:46:41] PHASE 3: L4H0 trajectory across 51 dense checkpoints
+[02:46:41] ============================================================
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 1526.30it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 1546.50it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights:  91%|████████████████████████████████████████████████████████████████████████████████████████▍        | 135/148 [00:00<00:00, 718.80it/s]Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 784.39it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 1491.44it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 29199.73it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:04:04]   [5/51] step=1200: L4H0→S2=0.015  L8H9→S2=0.040  L4H0 OV(IO-S)=-0.010  (208.7s/step)
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights:  20%|███████████████████▊                                                                              | 30/148 [00:00<00:00, 299.94it/s]Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 749.99it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights:  75%|████████████████████████████████████████████████████████████████████████                        | 111/148 [00:00<00:00, 1109.85it/s]Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 768.86it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 26057.05it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 36963.02it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 25405.46it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:20:19]   [10/51] step=1450: L4H0→S2=0.009  L8H9→S2=0.031  L4H0 OV(IO-S)=-0.005  (201.8s/step)
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights:  83%|███████████████████████████████████████████████████████████████████████████████▊                | 123/148 [00:00<00:00, 1212.33it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 1446.50it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights:  28%|███████████████████████████▏                                                                      | 41/148 [00:00<00:00, 409.87it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 1418.06it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 26218.83it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights:  28%|███████████████████████████▊                                                                      | 42/148 [00:00<00:00, 229.28it/s]Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 793.15it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 7126.78it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:29:44]   [15/51] step=1700: L4H0→S2=0.009  L8H9→S2=0.030  L4H0 OV(IO-S)=-0.008  (172.2s/step)
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6052.03it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6665.99it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5972.44it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5392.26it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6123.49it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:33:45]   [20/51] step=1950: L4H0→S2=0.005  L8H9→S2=0.035  L4H0 OV(IO-S)=+0.001  (141.2s/step)
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6317.11it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5152.58it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6036.03it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6727.25it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4867.08it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:37:45]   [25/51] step=2200: L4H0→S2=0.007  L8H9→S2=0.025  L4H0 OV(IO-S)=-0.006  (122.6s/step)
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6083.94it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5282.27it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6614.00it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6272.30it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6187.09it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:41:48]   [30/51] step=2450: L4H0→S2=0.004  L8H9→S2=0.022  L4H0 OV(IO-S)=-0.003  (110.2s/step)
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6313.64it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5074.99it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6330.25it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6147.08it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6287.93it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:45:49]   [35/51] step=2700: L4H0→S2=0.006  L8H9→S2=0.019  L4H0 OV(IO-S)=-0.007  (101.4s/step)
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6184.44it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6369.87it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4900.85it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5619.39it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4800.68it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:49:52]   [40/51] step=2950: L4H0→S2=0.005  L8H9→S2=0.020  L4H0 OV(IO-S)=-0.005  (94.8s/step)
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6340.79it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5082.63it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5695.02it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6077.39it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6249.25it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:53:56]   [45/51] step=3800: L4H0→S2=0.004  L8H9→S2=0.017  L4H0 OV(IO-S)=-0.006  (89.7s/step)
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6555.26it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6338.72it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4738.42it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6244.66it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6780.23it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:57:58]   [50/51] step=4800: L4H0→S2=0.006  L8H9→S2=0.035  L4H0 OV(IO-S)=-0.006  (85.5s/step)
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4977.72it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:58:46]   [51/51] step=5000: L4H0→S2=0.005  L8H9→S2=0.029  L4H0 OV(IO-S)=-0.006  (84.8s/step)
+[03:58:46] START phase4_zero_ablation
+[03:58:46] ============================================================
+[03:58:46] PHASE 4: L4H0 zero-ablation validation at step 5000
+[03:58:46] ============================================================
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5438.89it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:59:34]   baseline LD=+0.9030  CI=[+0.737, +1.068]
+[03:59:35]   zero-ablate L4H0: LD=+0.3714  ΔLD=-0.5315 [-0.578, -0.486]
+[03:59:35]   zero-ablate L8H9: LD=+0.9048  ΔLD=+0.0018 [-0.035, +0.039]
+[03:59:35] START phase5_multihead
+[03:59:35] ============================================================
+[03:59:35] PHASE 5: Multi-head joint patching at step 2000
+[03:59:35] ============================================================
+[03:59:35]   Top 10 S-promoting heads from head_patching: L4H8, L6H10, L5H11, L5H3, L3H2, L3H11, L3H9, L7H10, L6H5, L2H11
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5385.48it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:00:23]   Random-K control heads: L9H10, L7H7, L6H3, L10H9, L11H6, L4H1, L8H1, L7H0, L0H5, L4H6
+[04:00:23]   Top-1 joint patch: [(4, 8)]
+[04:00:25]     ΔLD=+0.0158 [+0.013, +0.019]
+[04:00:25]   Top-3 joint patch: [(4, 8), (6, 10), (5, 11)]
+[04:00:26]     ΔLD=+0.0356 [+0.030, +0.042]
+[04:00:26]   Top-5 joint patch: [(4, 8), (6, 10), (5, 11), (5, 3), (3, 2)]
+[04:00:28]     ΔLD=+0.0466 [+0.040, +0.053]
+[04:00:28]   Top-10 joint patch: [(4, 8), (6, 10), (5, 11), (5, 3), (3, 2), (3, 11), (3, 9), (7, 10), (6, 5), (2, 11)]
+[04:00:30]     ΔLD=+0.0679 [+0.060, +0.076]
+[04:00:30]   Random-K control runs:
+[04:00:31]     K=1: ΔLD=+0.0007 [+0.000, +0.001]
+[04:00:32]     K=3: ΔLD=-0.0032 [-0.004, -0.002]
+[04:00:34]     K=5: ΔLD=-0.0031 [-0.004, -0.002]
+[04:00:36]     K=10: ΔLD=-0.0031 [-0.006, -0.001]
+[04:00:36] Done. Total elapsed: 91.5 min. Output: results/emnlp_robustness_battery.json

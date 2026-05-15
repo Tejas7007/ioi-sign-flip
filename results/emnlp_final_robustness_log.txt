@@ -1,0 +1,90 @@
+nohup: ignoring input
+[02:31:12] START phase1_grokking
+[02:31:12] ============================================================
+[02:31:12] PHASE 1: Grokking sign-flip test (modular addition mod 113)
+[02:31:12] ============================================================
+[02:31:13]   Dataset: 8938 train, 3831 test (p=113)
+[02:31:13]   step=     0  train=0.009  test=0.008  Δ_test=+0.0000  Δ_train=+0.0000  (0s)
+[02:31:16]   step=   500  train=0.986  test=0.671  Δ_test=-0.6633  Δ_train=-0.9773  (3s)
+[02:31:18]   step=  1000  train=1.000  test=0.997  Δ_test=-0.9914  Δ_train=-0.9898  (5s)
+[02:31:36]   step=  5000  train=0.766  test=0.744  Δ_test=-0.7356  Δ_train=-0.7571  (23s)
+[02:31:38]   step=  5500  train=1.000  test=1.000  Δ_test=-0.9930  Δ_train=-0.9904  (25s)
+[02:31:56]   step=  9500  train=0.064  test=0.057  Δ_test=-0.0493  Δ_train=-0.0547  (43s)
+[02:31:58]   step= 10000  train=1.000  test=1.000  Δ_test=-0.9922  Δ_train=-0.9907  (45s)
+[02:32:16]   step= 14000  train=0.611  test=0.583  Δ_test=-0.5722  Δ_train=-0.6029  (63s)
+[02:32:18]   step= 14500  train=1.000  test=1.000  Δ_test=-0.9909  Δ_train=-0.9913  (65s)
+[02:32:20]   step= 15000  train=1.000  test=1.000  Δ_test=-0.9911  Δ_train=-0.9912  (67s)
+[02:32:34]   step= 18000  train=0.927  test=0.916  Δ_test=-0.9081  Δ_train=-0.9179  (81s)
+[02:32:36]   step= 18500  train=1.000  test=1.000  Δ_test=-0.9922  Δ_train=-0.9907  (83s)
+[02:32:43]   step= 20000  train=1.000  test=1.000  Δ_test=-0.9909  Δ_train=-0.9913  (90s)
+[02:32:49]   step= 21500  train=0.817  test=0.803  Δ_test=-0.7935  Δ_train=-0.8088  (97s)
+[02:32:52]   step= 22000  train=1.000  test=1.000  Δ_test=-0.9909  Δ_train=-0.9913  (99s)
+[02:32:58]   step= 23500  train=0.874  test=0.852  Δ_test=-0.8421  Δ_train=-0.8656  (105s)
+[02:33:01]   step= 24000  train=1.000  test=1.000  Δ_test=-0.9906  Δ_train=-0.9914  (108s)
+[02:33:05]   step= 25000  train=1.000  test=1.000  Δ_test=-0.9911  Δ_train=-0.9912  (112s)
+[02:33:25]   step= 29500  train=0.081  test=0.080  Δ_test=-0.0715  Δ_train=-0.0723  (132s)
+[02:33:27]   step= 30000  train=1.000  test=1.000  Δ_test=-0.9914  Δ_train=-0.9910  (134s)
+[02:33:41]   step= 33000  train=0.724  test=0.706  Δ_test=-0.6977  Δ_train=-0.7150  (148s)
+[02:33:43]   step= 33500  train=1.000  test=1.000  Δ_test=-0.9901  Δ_train=-0.9916  (150s)
+[02:33:50]   step= 35000  train=1.000  test=1.000  Δ_test=-0.9922  Δ_train=-0.9907  (157s)
+[02:34:12]   step= 40000  train=1.000  test=1.000  Δ_test=-0.9896  Δ_train=-0.9918  (179s)
+[02:34:28]   step= 43500  train=0.964  test=0.948  Δ_test=-0.9397  Δ_train=-0.9545  (195s)
+[02:34:30]   step= 44000  train=1.000  test=1.000  Δ_test=-0.9922  Δ_train=-0.9907  (197s)
+[02:34:32]   step= 44500  train=0.026  test=0.031  Δ_test=-0.0209  Δ_train=-0.0176  (199s)
+[02:34:34]   step= 45000  train=1.000  test=1.000  Δ_test=-0.9909  Δ_train=-0.9913  (201s)
+[02:34:41]   step= 46500  train=0.114  test=0.119  Δ_test=-0.1107  Δ_train=-0.1046  (208s)
+[02:34:43]   step= 47000  train=1.000  test=1.000  Δ_test=-0.9916  Δ_train=-0.9909  (210s)
+[02:34:56]   step= 50000  train=1.000  test=1.000  Δ_test=-0.9924  Δ_train=-0.9906  (224s)
+[02:34:56]   Grokking at step 1000  |  Min test acc: 0.008 at step 0  |  Final: train=1.000, test=1.000
+[02:34:56]   Pre-grok Δ_test=+0.0000  Post-grok Δ_test=-0.9924
+[02:34:56] START phase2_template_sensitivity
+[02:34:56] ============================================================
+[02:34:56] PHASE 2: Template sensitivity (GT + SVA)
+[02:34:56] ============================================================
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5359.72it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[02:35:05]   step 1000:
+[02:35:11]     GT 'original': acc=25.3%  diff=-0.2226 <-- DIP
+[02:35:17]     GT 'between': acc=44.0%  diff=-0.0815 <-- DIP
+[02:35:23]     GT 'started': acc=64.3%  diff=+0.0195
+[02:35:27]     SVA 'pp_attachment': acc=39.0%  logR=-0.246 <-- DIP
+[02:35:31]     SVA 'relative_clause': acc=34.5%  logR=-0.554 <-- DIP
+[02:35:34]     SVA 'double_pp': acc=36.5%  logR=-0.322 <-- DIP
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 7309.82it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[02:35:45]   step 5000:
+[02:35:51]     GT 'original': acc=92.7%  diff=+0.5086
+[02:35:57]     GT 'between': acc=95.0%  diff=+0.5631
+[02:36:02]     GT 'started': acc=100.0%  diff=+0.6774
+[02:36:06]     SVA 'pp_attachment': acc=98.0%  logR=+2.204
+[02:36:10]     SVA 'relative_clause': acc=95.5%  logR=+1.856
+[02:36:14]     SVA 'double_pp': acc=93.5%  logR=+1.654
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6030.92it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[02:36:23]   step 143000:
+[02:36:29]     GT 'original': acc=100.0%  diff=+0.8923
+[02:36:35]     GT 'between': acc=100.0%  diff=+0.9189
+[02:36:40]     GT 'started': acc=100.0%  diff=+0.8543
+[02:36:44]     SVA 'pp_attachment': acc=90.0%  logR=+1.707
+[02:36:48]     SVA 'relative_clause': acc=90.0%  logR=+1.812
+[02:36:52]     SVA 'double_pp': acc=82.5%  logR=+1.478
+[02:36:52] START phase3_layer_sensitivity
+[02:36:52] ============================================================
+[02:36:52] PHASE 3: Layer sensitivity for IOI S2 patching
+[02:36:52] ============================================================
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6159.28it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[02:37:00]   L0-2: ΔLD=+0.4472 [+0.378, +0.520]
+[02:37:01]   L3-5: ΔLD=+0.3884 [+0.322, +0.458]
+[02:37:02]   L6-8: ΔLD=+0.4432 [+0.395, +0.496]
+[02:37:03]   L9-11: ΔLD=+0.1327 [+0.113, +0.153]
+[02:37:03] START phase4_olmo
+[02:37:03] ============================================================
+[02:37:03] PHASE 4: OLMo architecture check (best-effort)
+[02:37:03] ============================================================
+[02:37:03]   Trying allenai/OLMo-1B-hf...
+Loading weights:   0%|                                                                                                            | 0/113 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 113/113 [00:00<00:00, 4124.19it/s]
+Loaded pretrained model allenai/OLMo-1B-hf into HookedTransformer
+[02:37:35]   SUCCESS: loaded allenai/OLMo-1B-hf
+[02:37:35]     IOI acc=66.0%  mean_LD=+0.9231
+[02:37:36] Done. Total elapsed: 6.4 min. Output: results/emnlp_final_robustness.json

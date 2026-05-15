@@ -1,0 +1,89 @@
+nohup: ignoring input
+[03:43:48] START phase1_toy_model
+[03:43:48] ============================================================
+[03:43:48] PHASE 1: Toy model with analytical training dip
+[03:43:48] ============================================================
+[03:43:49]   Corr(x_1, y) = -0.281 (should be negative)
+[03:43:49]   Corr(x_2, y) = 0.799 (should be positive)
+[03:43:49]   Training linear model...
+[03:43:49]     step=    0  acc=0.483  acc_abl=0.483  Δ=+0.0000  w1=+0.0000  w2=+0.0000
+[03:43:49]     step=  200  acc=0.851  acc_abl=0.991  Δ=+0.1400  w1=-0.0499  w2=+0.6053
+[03:43:49]     step=  400  acc=0.901  acc_abl=0.990  Δ=+0.0890  w1=-0.0467  w2=+1.0217
+[03:43:49]     step=  600  acc=0.921  acc_abl=0.991  Δ=+0.0695  w1=-0.0453  w2=+1.3388
+[03:43:49]     step=  800  acc=0.937  acc_abl=0.991  Δ=+0.0540  w1=-0.0444  w2=+1.5967
+[03:43:49]     step= 1000  acc=0.944  acc_abl=0.991  Δ=+0.0465  w1=-0.0439  w2=+1.8157
+[03:43:49]     step= 1200  acc=0.950  acc_abl=0.990  Δ=+0.0405  w1=-0.0435  w2=+2.0069
+[03:43:50]     step= 1400  acc=0.956  acc_abl=0.990  Δ=+0.0340  w1=-0.0432  w2=+2.1774
+[03:43:50]     step= 1600  acc=0.960  acc_abl=0.990  Δ=+0.0305  w1=-0.0430  w2=+2.3318
+[03:43:50]     step= 1800  acc=0.962  acc_abl=0.990  Δ=+0.0280  w1=-0.0428  w2=+2.4731
+[03:43:50]     step= 2000  acc=0.963  acc_abl=0.990  Δ=+0.0270  w1=-0.0427  w2=+2.6039
+[03:43:50]   Linear: min_acc=0.483 @ step 0  dip=YES  max_Δ=+0.3325
+[03:43:50]   Training 2-layer MLP...
+[03:43:50]     step=    0  acc=0.483  acc_abl=0.483  Δ=+0.0005
+[03:43:50]     step=  200  acc=0.623  acc_abl=0.730  Δ=+0.1065
+[03:43:50]     step=  400  acc=0.633  acc_abl=0.761  Δ=+0.1280
+[03:43:50]     step=  600  acc=0.652  acc_abl=0.902  Δ=+0.2505
+[03:43:51]     step=  800  acc=0.678  acc_abl=0.976  Δ=+0.2980
+[03:43:51]     step= 1000  acc=0.742  acc_abl=0.991  Δ=+0.2490
+[03:43:51]     step= 1200  acc=0.858  acc_abl=0.983  Δ=+0.1245
+[03:43:51]     step= 1400  acc=0.923  acc_abl=0.982  Δ=+0.0585
+[03:43:51]     step= 1600  acc=0.950  acc_abl=0.983  Δ=+0.0330
+[03:43:51]     step= 1800  acc=0.964  acc_abl=0.985  Δ=+0.0215
+[03:43:51]     step= 2000  acc=0.969  acc_abl=0.989  Δ=+0.0205
+[03:43:51]   MLP: min_acc=0.483 @ step 0  dip=YES  max_Δ=+0.3000  min_Δ=-0.1350
+[03:43:51] START phase2_logit_lens
+[03:43:51] ============================================================
+[03:43:51] PHASE 2: Logit lens across training
+[03:43:51] ============================================================
+[03:43:51]   step 1000:
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5566.38it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:44:01] FAILED phase2_logit_lens: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "/workspace/ioi-sign-flip/scripts/emnlp_reviewer_response.py", line 733, in main
+    results[key] = fn()
+                   ^^^^
+  File "/workspace/ioi-sign-flip/scripts/emnlp_reviewer_response.py", line 342, in phase2_logit_lens
+    per_layer = compute_logit_lens(model)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ioi-sign-flip/scripts/emnlp_reviewer_response.py", line 316, in compute_logit_lens
+    ld = (logits[idx, io_ids] - logits[idx, s_ids]).cpu().numpy()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+[03:44:01] START phase3_pca_ablation
+[03:44:01] ============================================================
+[03:44:01] PHASE 3: PCA ablation at S2
+[03:44:01] ============================================================
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6141.85it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[03:44:09]   collecting activations...
+[03:44:09]   layer 3: 300 difference vectors, d=768
+[03:44:09]     PCA top-5 explained variance: [0.0744023  0.06501307 0.06298589 0.04139825 0.03734259]
+[03:44:21]     K= 1: LD=-0.3490  Δ=+0.0704 [+0.049, +0.095]
+[03:44:27]     K= 3: LD=-0.2387  Δ=+0.1807 [+0.147, +0.216]
+[03:44:32]     K= 5: LD=-0.1968  Δ=+0.2226 [+0.184, +0.262]
+[03:44:38]     K=10: LD=-0.1188  Δ=+0.3006 [+0.255, +0.348]
+[03:44:43]     K=20: LD=+0.0472  Δ=+0.4666 [+0.412, +0.524]
+[03:44:43]   layer 4: 300 difference vectors, d=768
+[03:44:43]     PCA top-5 explained variance: [0.07283571 0.06281338 0.06200545 0.04107532 0.03729173]
+[03:44:55]     K= 1: LD=-0.3492  Δ=+0.0702 [+0.049, +0.093]
+[03:45:01]     K= 3: LD=-0.2024  Δ=+0.2170 [+0.183, +0.252]
+[03:45:06]     K= 5: LD=-0.1128  Δ=+0.3066 [+0.268, +0.346]
+[03:45:12]     K=10: LD=+0.0298  Δ=+0.4492 [+0.405, +0.495]
+[03:45:18]     K=20: LD=+0.1485  Δ=+0.5679 [+0.512, +0.625]
+[03:45:18]   layer 5: 300 difference vectors, d=768
+[03:45:18]     PCA top-5 explained variance: [0.07043892 0.06115634 0.05918248 0.04045976 0.03606166]
+[03:45:29]     K= 1: LD=-0.3769  Δ=+0.0425 [+0.028, +0.058]
+[03:45:35]     K= 3: LD=-0.2462  Δ=+0.1732 [+0.144, +0.204]
+[03:45:41]     K= 5: LD=-0.1734  Δ=+0.2460 [+0.212, +0.282]
+[03:45:46]     K=10: LD=-0.0277  Δ=+0.3917 [+0.349, +0.435]
+[03:45:52]     K=20: LD=+0.0687  Δ=+0.4881 [+0.435, +0.542]
+[03:45:52] START phase4_multiseed_grokking
+[03:45:52] ============================================================
+[03:45:52] PHASE 4: Multi-seed grokking (3 seeds, frac=0.3)
+[03:45:52] ============================================================
+[03:45:52]   seed=42
+[03:49:32]     grok=3000  max_Δ=+0.0000  positive=NO
+[03:49:32]   seed=123
+[03:53:30]     grok=2500  max_Δ=+0.0008  positive=NO
+[03:53:30]   seed=456

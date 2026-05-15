@@ -1,0 +1,147 @@
+nohup: ignoring input
+[04:24:31] START phase1_greater_than
+[04:24:31] ============================================================
+[04:24:31] PHASE 1: Greater-than (Hanna et al. 2023 format)
+[04:24:31] ============================================================
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5058.48it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:25:14]   step 0: 100/100 two-digit completions are single tokens
+[04:25:20]   step=0  acc=41.7%  P(>)-P(<=)=-0.0001  CI=[-0.000, -0.000]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5727.17it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:26:11]   step 256: 100/100 two-digit completions are single tokens
+[04:26:17]   step=256  acc=33.3%  P(>)-P(<=)=-0.0329  CI=[-0.043, -0.023]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5142.97it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:27:18]   step 512: 100/100 two-digit completions are single tokens
+[04:27:24]   step=512  acc=34.3%  P(>)-P(<=)=-0.0817  CI=[-0.103, -0.060]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5605.03it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:28:06]   step 1000: 100/100 two-digit completions are single tokens
+[04:28:12]   step=1000  acc=20.0%  P(>)-P(<=)=-0.2583  CI=[-0.290, -0.227]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5756.65it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:28:48]   step 2000: 100/100 two-digit completions are single tokens
+[04:28:54]   step=2000  acc=50.7%  P(>)-P(<=)=-0.0367  CI=[-0.062, -0.011]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6546.83it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:29:39]   step 3000: 100/100 two-digit completions are single tokens
+[04:29:45]   step=3000  acc=92.7%  P(>)-P(<=)=+0.4727  CI=[+0.440, +0.504]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5139.10it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:30:29]   step 5000: 100/100 two-digit completions are single tokens
+[04:30:35]   step=5000  acc=94.0%  P(>)-P(<=)=+0.5377  CI=[+0.510, +0.565]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6099.61it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:31:25]   step 8000: 100/100 two-digit completions are single tokens
+[04:31:31]   step=8000  acc=99.7%  P(>)-P(<=)=+0.6521  CI=[+0.632, +0.671]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6896.07it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:32:11]   step 10000: 100/100 two-digit completions are single tokens
+[04:32:17]   step=10000  acc=100.0%  P(>)-P(<=)=+0.7545  CI=[+0.736, +0.772]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5669.63it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:32:58]   step 50000: 100/100 two-digit completions are single tokens
+[04:33:04]   step=50000  acc=100.0%  P(>)-P(<=)=+0.8246  CI=[+0.812, +0.837]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5542.18it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:33:46]   step 143000: 100/100 two-digit completions are single tokens
+[04:33:52]   step=143000  acc=100.0%  P(>)-P(<=)=+0.8830  CI=[+0.874, +0.892]
+[04:33:52]   Lowest accuracy: step_1000 at 20.0%
+[04:33:52] START phase2_sva
+[04:33:52] ============================================================
+[04:33:52] PHASE 2: Subject-verb agreement with attractor
+[04:33:52] ============================================================
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6814.62it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:34:32]   Generated 200 SVA prompts
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5847.32it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:35:18]   step=0  acc=51.0%  logP(correct)-logP(attractor)=+0.0188 [-0.123, +0.159]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5113.28it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:36:06]   step=256  acc=18.5%  logP(correct)-logP(attractor)=-1.0272 [-1.166, -0.895]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6888.12it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:36:38]   step=512  acc=1.0%  logP(correct)-logP(attractor)=-1.9576 [-2.108, -1.812]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6828.86it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:37:22]   step=1000  acc=39.0%  logP(correct)-logP(attractor)=-0.2593 [-0.415, -0.104]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6039.90it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:38:10]   step=2000  acc=84.0%  logP(correct)-logP(attractor)=+1.2015 [+1.028, +1.369]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5642.42it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:38:59]   step=3000  acc=88.5%  logP(correct)-logP(attractor)=+1.4248 [+1.277, +1.568]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 7087.97it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:39:46]   step=5000  acc=98.5%  logP(correct)-logP(attractor)=+2.1569 [+2.035, +2.271]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6846.63it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:40:31]   step=8000  acc=97.5%  logP(correct)-logP(attractor)=+2.2164 [+2.066, +2.358]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5232.41it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:41:06]   step=10000  acc=99.0%  logP(correct)-logP(attractor)=+2.3258 [+2.153, +2.496]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5630.65it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:41:53]   step=50000  acc=93.0%  logP(correct)-logP(attractor)=+2.1377 [+1.929, +2.342]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5589.64it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:42:41]   step=143000  acc=92.0%  logP(correct)-logP(attractor)=+1.6423 [+1.471, +1.809]
+[04:42:41]   Lowest accuracy: step_512 at 1.0%
+[04:42:41] START phase3_natural_control
+[04:42:41] ============================================================
+[04:42:41] PHASE 3: Natural sentence NLL (negative control)
+[04:42:41] ============================================================
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4913.35it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:43:26]   step=0  NLL=11.0516  PPL=63044.49  CI=[10.907, 11.193]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6656.84it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:44:08]   step=256  NLL=6.8333  PPL=928.27  CI=[6.059, 7.582]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6719.31it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:44:52]   step=512  NLL=6.0876  PPL=440.37  CI=[5.384, 6.786]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4948.72it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:45:32]   step=1000  NLL=5.1699  PPL=175.90  CI=[4.495, 5.842]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5074.40it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:46:11]   step=2000  NLL=4.4028  PPL=81.68  CI=[3.730, 5.081]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6775.42it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:46:55]   step=3000  NLL=4.2400  PPL=69.41  CI=[3.580, 4.922]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6631.38it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:47:40]   step=5000  NLL=3.7601  PPL=42.95  CI=[3.164, 4.378]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6616.47it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:48:25]   step=8000  NLL=3.7702  PPL=43.39  CI=[3.161, 4.387]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 4826.47it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:48:59]   step=10000  NLL=3.5799  PPL=35.87  CI=[2.982, 4.208]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6670.07it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:49:42]   step=50000  NLL=3.6315  PPL=37.77  CI=[2.994, 4.301]
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6538.21it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:50:25]   step=143000  NLL=3.6422  PPL=38.18  CI=[3.026, 4.295]
+[04:50:25] START phase4_greater_than_intervention
+[04:50:25] ============================================================
+[04:50:25] PHASE 4: Causal intervention on greater-than at dip floor
+[04:50:25] ============================================================
+[04:50:25]   Dip detected at step_1000 (acc=20.0%)
+[04:50:25]   Loading model at dip floor (step 1000)
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 5346.01it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:51:20]   dip step=1000  base P(>)-P(<=)=-0.2573  patched=+0.0050  Δ=+0.2623 [+0.182, +0.343]
+[04:51:20] START phase5_sva_intervention
+[04:51:20] ============================================================
+[04:51:20] PHASE 5: Causal intervention on SVA at dip floor
+[04:51:20] ============================================================
+[04:51:20]   Dip detected at step_512 (acc=1.0%)
+[04:51:20]   Loading model at dip floor (step 512)
+Loading weights:   0%|                                                                                                            | 0/148 [00:00<?, ?it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 148/148 [00:00<00:00, 6654.56it/s]
+Loaded pretrained model EleutherAI/pythia-160m-deduped into HookedTransformer
+[04:52:11]   dip step=512  base P(correct)-P(attractor)=-0.0044  patched=+0.0039  Δ=+0.0083 [+0.007, +0.010]
+[04:52:11] Done. Total elapsed: 27.7 min. Output: results/emnlp_task_generalization.json
