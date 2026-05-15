@@ -304,7 +304,8 @@ def compute_logit_lens(model, n_prompts=100):
 
     # Cache all residual streams.
     names = [f"blocks.{L}.hook_resid_post" for L in range(model.cfg.n_layers)]
-    _, cache = model.run_with_cache(tokens, names_filter=names)
+    with torch.no_grad():
+        _, cache = model.run_with_cache(tokens, names_filter=names)
 
     per_layer_ld = {}
     for L in range(model.cfg.n_layers):
@@ -313,7 +314,7 @@ def compute_logit_lens(model, n_prompts=100):
         normed = model.ln_final(resid)
         logits = normed @ model.W_U + model.b_U
         idx = torch.arange(logits.shape[0], device=DEVICE)
-        ld = (logits[idx, io_ids] - logits[idx, s_ids]).cpu().numpy()
+        ld = (logits[idx, io_ids] - logits[idx, s_ids]).detach().cpu().numpy()
         per_layer_ld[f"layer_{L}"] = {
             "mean_ld": float(ld.mean()),
             "std_ld": float(ld.std()),
