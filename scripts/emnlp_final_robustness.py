@@ -158,10 +158,12 @@ def grok_evaluate(model, data_a, data_b, data_t, ablate_a=False, mean_a_embed=No
 def phase1_grokking():
     log("=" * 60)
     log("PHASE 1: Grokking sign-flip test (modular addition mod 113)")
+    log("  Sweeping training fractions: 0.3 (clean grokking),")
+    log("  0.5 (moderate), 0.7 (immediate generalization)")
     log("=" * 60)
 
     P = 113
-    TRAIN_FRAC = 0.7
+    TRAIN_FRACS = [0.3, 0.5, 0.7]
     D_MODEL = 128
     N_HEADS = 4
     N_LAYERS = 2
@@ -171,108 +173,120 @@ def phase1_grokking():
     BATCH = 512
     N_STEPS = 50000
     EVAL_EVERY = 500
-    CKPT_EVAL_STEPS = list(range(0, N_STEPS + 1, EVAL_EVERY))
+    CKPT_EVAL_STEPS = set(range(0, N_STEPS + 1, EVAL_EVERY))
 
-    # Dataset: all (a, b, (a+b)%p) pairs.
+    # All (a, b, (a+b)%p) pairs, shuffled once.
     rng = np.random.default_rng(SEED)
     pairs = [(a, b, (a + b) % P) for a in range(P) for b in range(P)]
     rng.shuffle(pairs)
-    split = int(TRAIN_FRAC * len(pairs))
-    train_pairs = pairs[:split]
-    test_pairs = pairs[split:]
 
-    train_a = torch.tensor([p[0] for p in train_pairs], device=DEVICE)
-    train_b = torch.tensor([p[1] for p in train_pairs], device=DEVICE)
-    train_t = torch.tensor([p[2] for p in train_pairs], device=DEVICE)
-    test_a = torch.tensor([p[0] for p in test_pairs], device=DEVICE)
-    test_b = torch.tensor([p[1] for p in test_pairs], device=DEVICE)
-    test_t = torch.tensor([p[2] for p in test_pairs], device=DEVICE)
+    out = {"config": {
+        "p": P, "d_model": D_MODEL, "n_layers": N_LAYERS,
+        "lr": LR, "weight_decay": WD, "train_fracs": TRAIN_FRACS,
+        "n_steps": N_STEPS,
+    }, "by_fraction": {}}
 
-    log(f"  Dataset: {len(train_pairs)} train, {len(test_pairs)} test (p={P})")
+    for frac in TRAIN_FRACS:
+        log(f"\n  --- train_frac={frac} ---")
+        split = int(frac * len(pairs))
+        train_pairs = pairs[:split]
+        test_pairs = pairs[split:]
 
-    model = GrokTransformer(P, D_MODEL, N_HEADS, N_LAYERS, D_MLP).to(DEVICE)
-    opt = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=WD)
+        train_a = torch.tensor([p[0] for p in train_pairs], device=DEVICE)
+        train_b = torch.tensor([p[1] for p in train_pairs], device=DEVICE)
+        train_t = torch.tensor([p[2] for p in train_pairs], device=DEVICE)
+        test_a = torch.tensor([p[0] for p in test_pairs], device=DEVICE)
+        test_b = torch.tensor([p[1] for p in test_pairs], device=DEVICE)
+        test_t = torch.tensor([p[2] for p in test_pairs], device=DEVICE)
 
-    trajectory = []
-    t0 = time.time()
+        log(f"  Dataset: {len(train_pairs)} train, {len(test_pairs)} test (p={P})")
 
-    for step in range(N_STEPS + 1):
-        # Evaluate at designated checkpoints.
-        if step in CKPT_EVAL_STEPS or step == N_STEPS:
-            model.eval()
-            # Compute mean a-embedding for ablation.
-            with torch.no_grad():
-                mean_a_embed = model.embed.weight[:P].mean(dim=0)
+        torch.manual_seed(SEED)
+        model = GrokTransformer(P, D_MODEL, N_HEADS, N_LAYERS, D_MLP).to(DEVICE)
+        opt = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=WD)
 
-            train_acc = grok_evaluate(model, train_a, train_b, train_t)
-            test_acc = grok_evaluate(model, test_a, test_b, test_t)
-            train_acc_abl = grok_evaluate(model, train_a, train_b, train_t,
-                                          ablate_a=True, mean_a_embed=mean_a_embed)
-            test_acc_abl = grok_evaluate(model, test_a, test_b, test_t,
-                                         ablate_a=True, mean_a_embed=mean_a_embed)
+        trajectory = []
+        t0 = time.time()
 
-            delta_train = train_acc_abl - train_acc
-            delta_test = test_acc_abl - test_acc
+        for step in range(N_STEPS + 1):
+            if step in CKPT_EVAL_STEPS or step == N_STEPS:
+                model.eval()
+                with torch.no_grad():
+                    mean_a_embed = model.embed.weight[:P].mean(dim=0)
 
-            trajectory.append({
-                "step": step,
-                "train_acc": train_acc,
-                "test_acc": test_acc,
-                "train_acc_ablated": train_acc_abl,
-                "test_acc_ablated": test_acc_abl,
-                "delta_train": delta_train,
-                "delta_test": delta_test,
-            })
+                train_acc = grok_evaluate(model, train_a, train_b, train_t)
+                test_acc = grok_evaluate(model, test_a, test_b, test_t)
+                train_acc_abl = grok_evaluate(model, train_a, train_b, train_t,
+                                              ablate_a=True, mean_a_embed=mean_a_embed)
+                test_acc_abl = grok_evaluate(model, test_a, test_b, test_t,
+                                             ablate_a=True, mean_a_embed=mean_a_embed)
 
-            if step % 5000 == 0 or (step > 0 and abs(test_acc - trajectory[-2]["test_acc"]) > 0.05 if len(trajectory) > 1 else False):
-                log(
-                    f"  step={step:>6}  train={train_acc:.3f}  test={test_acc:.3f}  "
-                    f"Δ_test={delta_test:+.4f}  Δ_train={delta_train:+.4f}  "
-                    f"({time.time()-t0:.0f}s)"
-                )
-            model.train()
+                delta_train = train_acc_abl - train_acc
+                delta_test = test_acc_abl - test_acc
 
-        if step == N_STEPS:
-            break
+                trajectory.append({
+                    "step": step,
+                    "train_acc": train_acc,
+                    "test_acc": test_acc,
+                    "train_acc_ablated": train_acc_abl,
+                    "test_acc_ablated": test_acc_abl,
+                    "delta_train": delta_train,
+                    "delta_test": delta_test,
+                })
 
-        # Training step.
-        idx = torch.randint(0, len(train_pairs), (BATCH,), device=DEVICE)
-        logits = model(train_a[idx], train_b[idx])
-        loss = F.cross_entropy(logits, train_t[idx])
-        opt.zero_grad()
-        loss.backward()
-        opt.step()
+                if step % 5000 == 0 or (len(trajectory) > 1 and abs(test_acc - trajectory[-2]["test_acc"]) > 0.05):
+                    log(
+                        f"    step={step:>6}  train={train_acc:.3f}  test={test_acc:.3f}  "
+                        f"Δ_test={delta_test:+.4f}  Δ_train={delta_train:+.4f}  "
+                        f"({time.time()-t0:.0f}s)"
+                    )
+                model.train()
 
-    # Find grokking point: first step where test_acc > 0.95.
-    grok_step = None
-    for r in trajectory:
-        if r["test_acc"] > 0.95:
-            grok_step = r["step"]
-            break
+            if step == N_STEPS:
+                break
 
-    # Find pre-grok dip floor: lowest test_acc.
-    min_test = min(trajectory, key=lambda r: r["test_acc"])
+            idx = torch.randint(0, len(train_pairs), (BATCH,), device=DEVICE)
+            logits = model(train_a[idx], train_b[idx])
+            loss = F.cross_entropy(logits, train_t[idx])
+            opt.zero_grad()
+            loss.backward()
+            opt.step()
 
-    out = {
-        "config": {
-            "p": P, "d_model": D_MODEL, "n_layers": N_LAYERS,
-            "lr": LR, "weight_decay": WD, "train_frac": TRAIN_FRAC,
-            "n_steps": N_STEPS,
-        },
-        "grokking_step": grok_step,
-        "min_test_acc": min_test["test_acc"],
-        "min_test_step": min_test["step"],
-        "trajectory": trajectory,
-    }
-    log(
-        f"  Grokking at step {grok_step}  |  "
-        f"Min test acc: {min_test['test_acc']:.3f} at step {min_test['step']}  |  "
-        f"Final: train={trajectory[-1]['train_acc']:.3f}, test={trajectory[-1]['test_acc']:.3f}"
-    )
-    log(
-        f"  Pre-grok Δ_test={min_test['delta_test']:+.4f}  "
-        f"Post-grok Δ_test={trajectory[-1]['delta_test']:+.4f}"
-    )
+        # Grokking point: first step where test_acc > 0.95.
+        grok_step = None
+        for r in trajectory:
+            if r["test_acc"] > 0.95:
+                grok_step = r["step"]
+                break
+
+        min_test = min(trajectory, key=lambda r: r["test_acc"])
+
+        # Check if Δ_test ever goes positive (would indicate shortcut misuse).
+        max_delta_test = max(r["delta_test"] for r in trajectory)
+        any_positive = max_delta_test > 0.01  # threshold above noise
+
+        frac_out = {
+            "train_frac": frac,
+            "n_train": len(train_pairs),
+            "n_test": len(test_pairs),
+            "grokking_step": grok_step,
+            "min_test_acc": min_test["test_acc"],
+            "min_test_step": min_test["step"],
+            "max_delta_test": max_delta_test,
+            "any_positive_delta": any_positive,
+            "trajectory": trajectory,
+        }
+        out["by_fraction"][f"frac_{frac}"] = frac_out
+
+        log(
+            f"  frac={frac}: grok_step={grok_step}  min_test={min_test['test_acc']:.3f} "
+            f"@ step {min_test['step']}  max_Δ_test={max_delta_test:+.4f}  "
+            f"positive_Δ={'YES' if any_positive else 'NO'}"
+        )
+
+        del model, opt
+        torch.cuda.empty_cache()
+
     return out
 
 
